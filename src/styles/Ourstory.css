@@ -1,0 +1,13 @@
+.slick-dots {
+  margin-top: 20px; /* Adjust the margin to control spacing */
+  text-align: justify;
+}
+
+.slick-dots li button:before {
+  font-size: 12px; /* Adjust the dot size */
+  color: #000; /* Adjust the dot color */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f97316; /* Highlight the active dot */
+}
