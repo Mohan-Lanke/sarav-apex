@@ -13,7 +13,7 @@ import NumberAnimation from "../Common/NumberAnimation";
 import { FaQuoteLeft } from "react-icons/fa";
 import videoSrc from "../assets/sample.mp4";
 import world_map from '../assets/new_world_map.jpeg';
-import "../styles/OurStory.css";
+import "../styles/Ourstory.css";
 const items = [
   { shortText: "A", fullText: "Apple" },
   { shortText: "B", fullText: "Banana" },
