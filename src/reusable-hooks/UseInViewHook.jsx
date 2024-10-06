@@ -2,20 +2,18 @@ import React from 'react';
 import { useEffect, useState, useRef } from "react";
 
 
-const UseInViewHook = () => {
-    const [isInView, setIsInView] = useState(false);
-  const ref = useRef(null);
+const UseInViewHook = (options) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect(); // Only trigger once
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing once the element is visible
         }
       },
-      {
-        threshold: 0.1, // Adjust based on when you want the animation to start
-      }
+      options
     );
 
     if (ref.current) {
@@ -23,11 +21,13 @@ const UseInViewHook = () => {
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
-  }, []);
+  }, [options]);
 
-    return { ref, isInView };
+  return [ref, isVisible];
   
 }
 

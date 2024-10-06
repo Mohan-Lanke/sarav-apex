@@ -1,0 +1,61 @@
+.scale-box {
+    display: flex;
+    flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .scale-icons {
+    margin: 1rem; /* Add some space between icons */
+    padding: 1rem; /* Space inside each icon box */
+    width: 120px; /* Set a width for each icon box */
+    transition: transform 0.3s; /* Smooth scaling */
+  }
+  
+  .scale-icons:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .hover-text {
+    display: none; /* Hide hover text by default */
+  }
+  
+  .scale-icons:hover .hover-text {
+    display: block; /* Show hover text on hover */
+  }
+  
+  .scale-desc {
+    font-size: 0.9rem; /* Adjust font size for description */
+    color: #333; /* Change text color */
+  }
+  
+  /* Add colors for the text classes */
+  .text-green {
+    color: #36B37E; /* Use your green color */
+  }
+  
+  .text-blue {
+    color: #007BFF; /* Example color */
+  }
+  
+  .text-yellow {
+    color: #FFC107; /* Example color */
+  }
+  
+  .text-pink {
+    color: #FF4081; /* Example color */
+  }
+  
+  .text-purple {
+    color: #6F42C1; /* Example color */
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 15s linear infinite;
+  }  

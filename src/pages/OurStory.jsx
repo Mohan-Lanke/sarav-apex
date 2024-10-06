@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from "react";
 import UseAnimateInViewHook from "../reusable-hooks/UseAnimateInViewHook";
+import { FadeIn, FadeOut, FadeLeft, FadeRight, FadeUp, FadeDown, ZoomIn, ZoomOut } from "../Common/animations";
 import Slider from "react-slick";
 /* Add this to your main CSS file */
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import oneImg from "../assets/one.svg";
-import twoImg from "../assets/two.svg";
-import threeImg from "../assets/three.svg";
-import fourImg from "../assets/four.svg";
-import fiveImg from "../assets/five.svg";
 import NumberAnimation from "../Common/NumberAnimation";
 import { FaQuoteLeft } from "react-icons/fa";
 import videoSrc from "../assets/sample.mp4";
-import world_map from '../assets/new_world_map.jpeg';
-import "../styles/Ourstory.css";
+import world_map from "../assets/worldMap.png";
+import "../styles/OurStory.css";
+import ScaleComponent from "../Common/ScaleComponent";
 const items = [
   { shortText: "A", fullText: "Apple" },
   { shortText: "B", fullText: "Banana" },
@@ -57,11 +54,6 @@ const OurStory = () => {
   const [hoveredLocation, setHoveredLocation] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [autoplay, setAutoplay] = useState(true); // State to control autoplay
-
-  useEffect(() => {
-    console.log(autoplay);
-  }, [autoplay]);
-
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
@@ -150,56 +142,42 @@ const OurStory = () => {
 
   return (
     <div className="bg-gray-900 h-full">
-      {/* <div className="grid grid-cols-2 gap-4 h-[60vh]">
-        Left element
-        <div ref={leftElement.ref} className={leftElement.classes}>
-          <h2 className="text-center">Left Section Animates!</h2>
-        </div>
-
-        Right element
-        <div ref={rightElement.ref} className={rightElement.classes}>
-          <h2 className="text-center">Right Section Animates!</h2>
-        </div>
-
-        Up element
-        <div ref={upElement.ref} className={upElement.classes}>
-          <h2 className="text-center">Up Section Animates!</h2>
-        </div>
-
-        Down element
-        <div ref={downElement.ref} className={downElement.classes}>
-          <h2 className="text-center">Down Section Animates!</h2>
-        </div>
-
-        <div ref={zoomInElement.ref} className={zoomInElement.classes}>
-          <h2 className="text-center text-2xl font-bold">Mohan Lanke</h2>
-        </div>
-      </div>
-      <br />
-      <br /> */}
+      
       {/* landing section  */}
-      <div className="w-full h-80 md:h-[calc(100vh-72px)] relative overflow-hidden">
+      <div className="w-full h-80 md:h-[calc(100vh-72px)] relative overflow-hidden flex items-center justify-center">
         <img
           className="h-full w-full object-cover"
           src="https://cdn-rio.dataweavers.io/-/media/content/images/news/rt-mining-pit.jpg?rev=5f747b008b624ebc848dd421004f0965&w=1920&hash=4087A1C934DD418C203734373713F55E"
           alt="mining site"
         />
 
-        <div className="absolute w-full h-full top-0 md:top-56 md:left-16 flex flex-col gap-4 items-center justify-center md:items-start md:justify-start">
-          <p className="uppercase text-sm text-gray-800 font-semibold tracking-widest">
+       
+        <div className="absolute w-full h-full flex flex-col gap-4 items-center justify-center items-center">
+        <FadeIn>
+          <p className="uppercase text-sm text-black font-semibold tracking-widest ">
             Introducing Saravapex
           </p>
-          <h2 className="md:text-5xl text-2xl font-bold leading-normal text-center md:text-left">
-            The Best Mining <br /> for the Digital Age
+          </FadeIn>
+          <ZoomIn>
+          <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
+            The Best Mining for the
           </h2>
-
+          </ZoomIn>
+          <ZoomIn>
+          <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
+              Digital Age
+          </h2>
+          </ZoomIn>
+          <FadeUp>
           <button
             type="button"
-            className="uppercase text-white bg-orange-400 max-w-40 hover:bg-orange-800 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+            className=" mt-3 uppercase text-white bg-orange-400 max-w-40 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
           >
             Request a Demo
           </button>
+          </FadeUp>
         </div>
+        
       </div>
 
       {/* about us  */}
@@ -212,40 +190,39 @@ const OurStory = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-1/2 text-left px-5">
+            <FadeUp>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-12 h-[2px] bg-white"></div>
-              <h2 className="text-xl md:text-3xl font-semibold text-white">
+              <h2 className="text-xl md:text-3xl font-semibold text-white fade-up">
                 About Us - <span className="!text-orange-600">SaravApex</span>
               </h2>
             </div>
-            <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4">
-              At SaravApex, we take pride in being a trusted global producer and
-              supplier of quartz and other industrial minerals. We specialize in
-              the excavation, refinement, sourcing, processing and export of
-              minerals tailored to meet the specific needs of diverse industries
-              worldwide. With vast reserves, we consistently deliver
-              high-quality minerals in both processed and lump forms, ensuring
-              timely service for our domestic and international customers.
+            <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up">
+            At SaravApex, we take pride in being a trusted global producer and supplier of quartz and other industrial minerals. We specialize in the excavation, refinement, sourcing, processing and export of minerals tailored to meet the specific needs of diverse industries worldwide. With vast reserves, we consistently deliver high-quality minerals in both processed and lump forms, ensuring timely service for our domestic and international clients.
             </p>
-            <a
+            <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up">
+            At the core of our operations lay direct access to our own mining quarries and state-of-the-art manufacturing facilities in southern India. This unique combination allowed us to maintain consistency in quality while offering competitive prices. Strategically positioned near major seaports, our location facilitated seamless logistics, enabling us to deliver our treasures to over 7+ countries around the globe.As certified quartz exporters, we are committed to excellence and innovation, continuously evolving to meet the growing demands of the global market.
+            </p>
+            <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up">
+            Our dedicated team of mining and logistics professionals, with an average experience of nearly 20 years, focuses on providing personalized service, making SaravApex your reliable partner for Quartz backed by exceptional support and global expertise. Over the years, we have rapidly grown into a leading exporter and mine owner of essential minerals, committed to supporting our clients' success.
+            </p>
+            {/* <a
               href="#"
-              className="text-orange-500 font-semibold hover:underline md:pl-14"
+              className="text-orange-500 font-semibold hover:underline md:pl-14 fade-up"
             >
               View More
-            </a>
+            </a> */}
+            </FadeUp>
           </div>
         </div>
       </section>
 
       {/* locations section  */}
-      <section>
+      <section className="pt-8 md:pt-12">
+        <ZoomIn duration={2} options={{threshold: 0.3}}>
         <div className="relative w-full h-full ">
           {/* Map image */}
-          <img
-            src={world_map}
-            alt="World Map"
-            className="w-full h-auto"
-          />
+          <img src={world_map} alt="World Map" className="w-10/12 md:w-9/12 h-auto mx-auto opacity-30" />
 
           {/* Pin points */}
           {locations.map((location) => (
@@ -261,7 +238,7 @@ const OurStory = () => {
                 <div className=" rounded-full flex items-center justify-center">
                   <span className="text-white">
                     <svg
-                      class="w-6 h-6 text-red-800 dark:text-white animate-bounce"
+                      className="w-6 h-6 text-orange-600 dark:text-white animate-bounce"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -280,7 +257,7 @@ const OurStory = () => {
 
                 {/* Tooltip card on hover */}
                 {hoveredLocation === location.id && (
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-4 w-64 bg-blue-500 text-white text-sm rounded-lg shadow-lg z-10">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-4 md:w-64 bg-orange-600 text-gray-200 text-sm rounded-lg shadow-lg z-10">
                     <h3 className="font-bold">{location.name}</h3>
                     <p>{location.details}</p>
                   </div>
@@ -289,22 +266,23 @@ const OurStory = () => {
             </div>
           ))}
         </div>
+        </ZoomIn>
       </section>
 
       {/* number animation  */}
-      <section className="px-4 py-8 md:py-16">
+      <section className="px-4 pt-8 md:pt-12">
         <div className="md:w-11/12 mx-auto">
           <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-y-4">
             {numCount.map((item) => (
               <>
                 <div
                   key={item.id}
-                  className="flex flex-col items-center md:items-center"
+                  className="flex flex-col items-center items-center"
                 >
-                  <p className="text-3xl text-white font-bold flex items-center gap-x-2">
+                  <p className="text-xl md:text-3xl text-white font-bold flex items-center gap-x-2">
                     <NumberAnimation value={item.count} /> {item.addOn}
                   </p>
-                  <p className="text-lg text-gray-300 font-semibold">
+                  <p className="text-sm md:text-lg text-gray-300 font-semibold">
                     {item.title}
                   </p>
                 </div>
@@ -312,98 +290,80 @@ const OurStory = () => {
             ))}
           </div>
         </div>
-      </section>  
+      </section>
 
+      <section className="pt-8 md:pt-12">
+      <ScaleComponent/>
+      </section>
       {/* vision and mission */}
-      <section className="bg-transparent h-full">
+      <section className="bg-transparent h-full pt-8 md:pt-12">
         <div className="md:w-9/12 lg:7/12 h-screen md:h-96 p-4 mx-auto grid md:grid-cols-2 gap-2 md:mt-16">
-          <div className="bg-[#D4E3DD] rounded-md border border-green-400 md:relative flex flex-col items-center justify-center p-4 md:p-2">
+          <FadeLeft>
+          <div className=" bg-[#36B37E] bg-opacity-20 h-full rounded-md  md:relative flex flex-col items-center justify-center p-4 md:p-2">
             <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
               <div className="h-64 bg-orange-300 w-8/12 rounded-lg  "></div>
               <div className="w-8/12 !text-center">
-                <p className="text-sm font-medium text-gray-900">Vision</p>
-                <p className="text-sm font-normal text-gray-900">
-                  To be the leading global provider of Minerals, recognized for
-                  our commitment to excellent customer satisfaction and
-                  sustainable.
+                <p className="text-lg font-medium text-gray-300">Vision</p>
+                <p className="text-sm font-normal text-gray-300">
+                To be the leading global provider of Minerals, recognized for our commitment to excellent customer satisfaction and sustainable practices.
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-[#D6E2E6] rounded-md border border-blue-400 md:relative flex flex-col items-center justify-center p-4 md:p-2">
+          </FadeLeft>
+          <FadeRight>
+          <div className="bg-[#33C6FC] bg-opacity-20 h-full rounded-md md:relative flex flex-col items-center justify-center p-4 md:p-2">
             <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
               <div className="h-64 bg-orange-300 w-8/12 rounded-lg  "></div>
               <div className="w-8/12 !text-center">
-                <p className="text-sm font-medium text-gray-900">Vision</p>
-                <p className="text-sm font-normal text-gray-900">
-                  To be the leading global provider of Minerals, recognized for
-                  our commitment to excellent customer satisfaction and
-                  sustainable.
+                <p className="text-lg font-medium text-gray-300">Vision</p>
+                <p className="text-sm font-normal text-gray-300">
+                To provide high-quality minerals that meet our customers' needs while being kind to the environment.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>      
-
-      {/* core values  */}
-      <section className="card px-0 pt-8 md:pt-16">
-        <div className="my-8 lg:w-9/12 mx-auto overflow-hidden">
-          <Slider
-            {...settings}
-            onMouseEnter={() => setAutoplay(false)} // Pause autoplay on hover
-            onMouseLeave={() => setAutoplay(true)} // Resume autoplay when mouse leaves
-          >
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center h-32 "
-              >
-                <div className="card text-center bg-whitem-2 h-full w-9/12 rounded-lg border border-solid shadow-lg group cursor-pointer">
-                  {/* Text wrapper */}
-                  <div className="relative h-full w-full flex justify-center items-center overflow-hidden ">
-                    {/* Single character */}
-                    <span className="absolute group-hover:hidden group-hover:opacity-0 opacity-100  transition-opacity duration-500 text-4xl font-bold text-gray-300">
-                      {item.shortText}
-                    </span>
-                    {/* Full text on hover */}
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity  text-sm text-gray-300 font-normal">
-                      {item.fullText}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
+          </FadeRight>
         </div>
       </section>
 
       {/* customer testimonial  */}
-      <section className="pt-8 md:pt-16">
+      <section className="pt-8 md:pt-12">
         <div className="w-11/12 md:flex mx-auto">
-          <div className="md:w-4/12"></div>
+          <div className="md:w-4/12 flex items-center">
+          <div className="flex gap-4 items-center mb-3">
+              <p className="text-2xl md:text-5xl text-white md:px-4 ">
+                <ZoomIn duration={3} options={{threshold:0.3}} >
+                We are trusted by our customers
+                </ZoomIn>
+                
+              </p>
+            </div>
+          </div>
           <div className="md:w-8/12 pb-5 relative">
             <div className="flex gap-4 items-center mb-3">
-              <div className="w-12 h-[2px] bg-white"></div>
-              <p className="text-xl md:text-3xl text-white">What our customer says</p>
+              <div className="w-12 h-[2px] bg-white hidden md:block"></div>
+              <p className="text-xl md:text-3xl text-white text-center pl-6 md:pl-0">
+                What our customer says
+              </p>
             </div>
 
-            <div className="pl-14">
+            <div className="md:pl-14 pl-6">
               <Slider {...testimonial_settings}>
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="flex flex-col items-center pl-2">
-                    {/* Testimonial Quote */}
+                    
                     <p className="text-sm md:text-lg text-gray-300 !font-normal mb-4 w-10/12">
                       {`"${testimonial.quote}"`}
                     </p>
 
-                    {/* Author Info */}
                     <div className="text-sm md:text-lg text-gray-300 font-semibold  mt-4">
                       {testimonial.author}{" "}
-                      <span className="text-sm font-medium text-gray-300">- {testimonial.position}</span>
+                      <span className="text-sm font-medium text-gray-300">
+                        - {testimonial.position}
+                      </span>
                     </div>
 
-                    {/* Move dots below this */}
                   </div>
                 ))}
               </Slider>
@@ -411,15 +371,16 @@ const OurStory = () => {
 
             {/* Quote Icon */}
             <div className="absolute bottom-0 right-10 md:right-44 text-orange-500 opacity-80">
+              <FadeRight>
               <FaQuoteLeft size={60} />
+              </FadeRight>
             </div>
           </div>
         </div>
       </section>
 
-      
       {/* video section  */}
-      <section className="w-full h-[400px] bg-black flex justify-center items-center mt-8 md:mt-16">
+      <section className="w-full h-[400px] bg-black flex justify-center items-center mt-8 md:mt-12">
         {!isPlaying ? (
           <button
             onClick={handlePlayClick}
@@ -443,8 +404,7 @@ const OurStory = () => {
           />
         )}
       </section>
- 
-      <div className="h-56"></div>
+
     </div>
   );
 };

@@ -1,69 +1,148 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import sarav_apex from "../assets/Sarav_apex_png.png";
 
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const toggleMenu = (path) => {
-    console.log(path)
+    console.log(path);
     setIsOpen(!isOpen);
-    if(path) navigate(path)
+    if (path) navigate(path);
   };
   return (
     <>
       <header className="bg-white shadow-md sticky top-0 z-50">
-        <section className="w-11/12 mx-auto ">
+        <section className="w-full mx-auto ">
           <div className="container mx-auto flex justify-between items-center p-4">
             {/* Logo Section */}
-            <div className="flex items-center">
+            <div
+              onClick={() => {
+                navigate("/");
+              }}
+              className="cursor-pointer"
+            >
               <img
-                src="https://via.placeholder.com/100" // Replace with your logo URL
+                // src="https://via.placeholder.com/100" // Replace with your logo URL
+                src={sarav_apex} // Replace with your logo URL
                 alt="Logo"
                 className="h-10 w-auto"
               />
-              <span className="ml-3 text-xl font-bold">Sarav Apex</span>
             </div>
 
             {/* Navigation Section */}
             <nav className="hidden lg:flex space-x-8">
               <a
-                onClick={()=>{toggleMenu('/')}}
-                className="relative relative group/border cursor-pointer text-orange-600 transition duration-300"
+                onClick={() => {
+                  toggleMenu("/");
+                }}
+                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Our Story
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
               <a
-                onClick={()=>{toggleMenu('/why-sarav')}}
-                className="relative relative group/border cursor-pointer text-orange-600 transition duration-300"
+                onClick={() => {
+                  toggleMenu("/why-sarav");
+                }}
+                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Why Sarav?
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
+              <div className="relative group">
+                <a className="relative cursor-pointer flex items-center font-medium text-orange-600 transition duration-300">
+                  Products
+                  <svg
+                    className="ml-1 mt-0.5 h-4 w-4 transition-transform duration-300 group-hover:rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <div className="absolute left-0 hidden pt-2 w-48 bg-white shadow-lg group-hover:block rounded-lg">
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_lumps");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Lumps
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_grits");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Grits
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_chips");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Chips
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_grains");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Grains
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_sands");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Sands
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/raming_mass");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Raming mass
+                  </a>
+                </div>
+              </div>
               <a
-                onClick={()=>{toggleMenu('/products')}}
-                className="relative relative group/border cursor-pointer text-orange-600 transition duration-300"
-              >
-                Products
-                <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
-              </a>
-              <a
-                onClick={()=>{toggleMenu('/infrastructre')}}
-                className="relative relative group/border cursor-pointer text-orange-600 transition duration-300"
+                onClick={() => {
+                  toggleMenu("/infrastructre");
+                }}
+                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Infrastructure
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
-              <a
-                onClick={()=>{toggleMenu('/industries')}}
-                className="relative relative group/border cursor-pointer text-orange-600 transition duration-300"
+              {/* <a
+                onClick={() => {
+                  toggleMenu("/industries");
+                }}
+                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Industries
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
-              </a>
+              </a> */}
               <a
-                onClick={()=>{toggleMenu('/contact-us')}}
-                className="relative relative group/border cursor-pointer text-orange-600 transition duration-300"
+                onClick={() => {
+                  toggleMenu("/contact-us");
+                }}
+                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Contact
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -73,7 +152,9 @@ const HeaderComponent = () => {
             {/* Mobile Menu Button */}
             <div className="lg:hidden z-50">
               <button
-                onClick={()=>{toggleMenu()}}
+                onClick={() => {
+                  toggleMenu();
+                }}
                 className="text-gray-700 focus:outline-none"
               >
                 {isOpen ? (
@@ -117,12 +198,25 @@ const HeaderComponent = () => {
               isOpen
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-full"
-            } lg:hidden bg-white p-4 shadow-md transition-all duration-700 ease-in-out absolute top-16 left-0 right-0`}
+            } lg:hidden bg-white p-4 shadow-md transition-all duration-700 ease-in-out absolute top-0 left-0 right-0 mb-8 lg:mb-0`}
           >
             <nav>
+              <div className="flex items-center pb-5">
+                <img
+                onClick={() => {
+                  navigate("/");
+                }}
+                  // src="https://via.placeholder.com/100" // Replace with your logo URL
+                  src={sarav_apex}
+                  alt="Logo"
+                  className="h-10 w-auto"
+                />
+              </div>
               <a
                 href="#"
-                onClick={()=>{toggleMenu('/')}}
+                onClick={() => {
+                  toggleMenu("/");
+                }}
                 className="block relative relative group/border cursor-pointer text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Our Story
@@ -130,39 +224,109 @@ const HeaderComponent = () => {
               </a>
               <a
                 href="#"
-                onClick={()=>{toggleMenu('/why-sarav')}}
+                onClick={() => {
+                  toggleMenu("/why-sarav");
+                }}
                 className="block relative relative group/border cursor-pointer text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Why Sarav?
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
+              <div className="relative group">
+                <a className="relative cursor-pointer flex items-center font-medium text-orange-600 transition duration-300">
+                  Products
+                  <svg
+                    className="ml-1 mt-0.5 h-4 w-4 transition-transform duration-300 group-hover:rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <div className="absolute left-0 hidden pt-2 w-48 bg-white shadow-lg group-hover:block rounded-lg">
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_lumps");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Lumps
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_grits");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Grits
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_chips");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Chips
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_grains");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Grains
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/quartz_sands");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Quartz Sands
+                  </a>
+                  <a
+                    onClick={() => {
+                      toggleMenu("/products/raming_mass");
+                    }}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
+                  >
+                    ● Raming mass
+                  </a>
+                </div>
+              </div>
               <a
                 href="#"
-                onClick={()=>{toggleMenu('/products')}}
-                className="block relative relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
-              >
-                Products
-                <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
-              </a>
-              <a
-                href="#"
-                onClick={()=>{toggleMenu('/infrastructre')}}
+                onClick={() => {
+                  toggleMenu("/infrastructre");
+                }}
                 className="block relative relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Infrstructure
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
-              <a
+              {/* <a
                 href="#"
-                onClick={()=>{toggleMenu('/industries')}}
+                onClick={() => {
+                  toggleMenu("/industries/?quartz_lumps");
+                }}
                 className="block relative relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Industries
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
-              </a>
+              </a> */}
               <a
                 href="#"
-                onClick={()=>{toggleMenu('/contact-us')}}
+                onClick={() => {
+                  toggleMenu("/contact-us");
+                }}
                 className="block relative relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Contact
