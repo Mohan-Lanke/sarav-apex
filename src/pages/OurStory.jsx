@@ -9,7 +9,7 @@ import NumberAnimation from "../Common/NumberAnimation";
 import { FaQuoteLeft } from "react-icons/fa";
 import videoSrc from "../assets/sample.mp4";
 import world_map from "../assets/worldMap.png";
-import "../styles/OurStory.css";
+import "../styles/Ourstory.css";
 import ScaleComponent from "../Common/ScaleComponent";
 const items = [
   { shortText: "A", fullText: "Apple" },
