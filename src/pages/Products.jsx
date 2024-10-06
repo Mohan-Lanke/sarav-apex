@@ -1,153 +1,243 @@
-import React from 'react'
+import React,{useState, useEffect,useRef} from 'react';
+import { FadeIn, FadeOut, FadeLeft, FadeRight, FadeUp, FadeDown, ZoomIn, ZoomOut } from "../Common/animations";
+import { useNavigate, useParams } from "react-router-dom";
+import ceramic from "../assets/industries/Ceramic.jpg";
+import constr_chem from "../assets/industries/constr_Chem.jpg";
+import electronics from "../assets/industries/electronics.jpeg";
+import ferro from "../assets/industries/ferro.jpeg";
+import glass from "../assets/industries/glass.jpeg";
+import painting from "../assets/industries/painting.jpeg";
+import pestiside_coating from "../assets/industries/pestiside_coating.jpeg";
+import rubber from "../assets/industries/Rubber.jpg";
+import solar_modules from "../assets/industries/solar_modules.jpeg";
+import tiles from "../assets/industries/tiles.jpeg";
 
 const Products = () => {
+  const [showMore, setShowMore] = useState(false);
+  const handleToggle = () => {
+    setShowMore(!showMore);
+  };
+  const params = useParams()
+  const navigate = useNavigate();
+  console.log(params)
+  const [activeTab, setActiveTab] = useState("quartz_lumps");
+  useEffect(() => {
+    if (params.id) {
+      setActiveTab(params.id);
+      handleTabClick(params.id);
+      if (tabRefs.current[params.id]) {
+        tabRefs.current[params.id].scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [params]);
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    if (tabRefs.current[tabId]) {
+      tabRefs.current[tabId].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  const tabRefs = useRef({});
+  const products = [
+    {id:1, img:ceramic},
+    {id:2, img:constr_chem},
+    {id:3, img:electronics},
+    {id:4, img:ferro},
+    {id:5, img:glass},
+    {id:6, img:painting},
+    {id:7, img:pestiside_coating},
+    {id:8, img:rubber},
+    {id:9, img:solar_modules},
+    {id:10, img:tiles},
+  ];
+  const displayedProducts = showMore ? products : products.slice(0, 5);
+
+  const tabs = [
+    {
+      id: "quartz_lumps",
+      label: "Quartz Lumps",
+      content:
+        "We focus on delivering high quality and consistency. Our quartz is carefully sourced from certified mines and undergoes strict quality checks to ensure its purity and precision. Using modern processing methods and following global standards, we provide different grades of quartz to meet the needs of our domestic and international clients, every time."
+    },
+    {
+      id: "quartz_grits",
+      label: "Quartz Grits",
+      content:
+        "we pride ourselves on our extensive export expertise in the global quartz market. Our dedicated team ensures that our high-quality quartz products meet the diverse needs of clients across countries such as China, Malaysia, Vietnam, Korea, Japan, Bhutan, Thailand, the USA, Bangladesh, and the UAE. With a robust logistics network and a commitment to customer satisfaction, we deliver unparalleled service and reliability. Partner with us to experience excellence in quartz trading on a global scale. Your trusted source for quality quartz awaits!"
+    },
+    {
+      id: "quartz_chips",
+      label: "Quartz Chips",
+      content:
+        "We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!"
+    },
+    {
+      id: "quartz_grains",
+      label: "Quartz Grains",
+      content:
+        "Our robust supply chain and logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us."
+    },
+    {
+      id: "quartz_sands",
+      label: "Quartz Sands",
+      content:
+        "we pride ourselves on our extensive export expertise in the global quartz market. Our dedicated team ensures that our high-quality quartz products meet the diverse needs of clients across countries such as China, Malaysia, Vietnam, Korea, Japan, Bhutan, Thailand, the USA, Bangladesh, and the UAE. With a robust logistics network and a commitment to customer satisfaction, we deliver unparalleled service and reliability. Partner with us to experience excellence in quartz trading on a global scale. Your trusted source for quality quartz awaits!"
+    },
+    {
+      id: "raming_mass",
+      label: "Raming mass",
+      content:
+        "We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!"
+    },
+  ];
   return (
-    <section className='bg-gray-900'>
-      {/* landing section  */}
-      <div className="w-full h-80 md:h-[calc(100vh-72px)] relative overflow-hidden">
-        <img
-          className="h-full w-full object-cover"
-          src="https://cdn-rio.dataweavers.io/-/media/content/images/news/rt-mining-pit.jpg?rev=5f747b008b624ebc848dd421004f0965&w=1920&hash=4087A1C934DD418C203734373713F55E"
-          alt="mining site"
-        />
-
-        <div className="absolute w-full h-full top-0 md:top-56 md:left-16 flex flex-col gap-4 items-center justify-center md:items-start md:justify-start">
-          <p className="uppercase text-sm text-gray-800 font-semibold tracking-widest">
-            Introducing Saravapex
-          </p>
-          <h2 className="md:text-5xl text-2xl font-bold leading-normal text-center md:text-left">
-            The Best Mining <br /> for the Digital Age
-          </h2>
-
-          <button
-            type="button"
-            className="uppercase text-white bg-orange-400 max-w-40 hover:bg-orange-800 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
-          >
-            Request a Demo
-          </button>
-        </div>
+    <section className="bg-gray-900">
+      <div className="w-full p-5 h-80 md:h-[calc(100vh-72px)] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
+        <h1 className="md:text-5xl text-2xl font-bold mb-4 md:mb-8">
+        <ZoomIn>
+          Quartz Solutions That Bring Your Vision to Life.
+        </ZoomIn>
+        </h1>
+        <p className="md:text-lg text-sm mb-4">
+          <ZoomIn>
+          Reverses signs of aging by improving the inner structure of your skin.
+          Bye wrinkles. Ciao sun damage.
+          </ZoomIn>
+        </p>
+        <button
+        
+        className="bg-white text-sm text-black px-4 py-1.5 md:px-6 md:py-3 rounded-lg hover:bg-gray-200">
+          <ZoomIn>
+          See All Products
+          </ZoomIn>
+        </button>
+      <div ref={(el) => (tabRefs.current[params.id] = el)}></div>
       </div>
 
-      {/* // products list starts  */}  
-      <section className=' pt-8 md:pt-16'>
-        <div className='w-10/12 flex  md:flex-row flex-col gap-2 mx-auto'>
-          <div className='md:w-1/2 py-2 md:px-12 flex flex-col gap-6 justify-center'>
-            <p className='md:text-2xl font-semibold text-xl text-white'>More About Acetylcysteine</p>
 
-            <div>
-              <p className='text-xs md:text-sm text-gray-300'>This drug is perfect for those of you who are experiencing fatigue and also</p>
-              <p className='text-xs md:text-sm text-gray-300'>always staying up late because this drug contains so much vitamin C</p>
-            </div>
-            <div>
-              <p className='text-xs md:text-sm text-gray-300'>This drug is a good medicine to help your child's growth, so that it can
-              increase</p>
-              <p className='text-xs md:text-sm text-gray-300'>appetite and also make your body taller and more muscular, make your
-              brain</p>
-              <p className='text-xs md:text-sm text-gray-300'>smart and also good for eye health and hair health so you will look</p>
-            </div>
-
-            <div className='w-full h-40 bg-gray-300 rounded-lg'>
-
-            </div>
-          </div>
-          <div className='md:w-1/2 py-2 md:px-12 flex flex-col gap-4'>
-          <p className='md:text-xl font-semibold text-lg text-gray-300'>Material Contained</p>
-          
-          <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Categories</p>
-              <p className='text-xs md:text-sm text-gray-300'>Drugs and Vitamin</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Composisi</p>
-              <p className='text-xs md:text-sm text-gray-300'>Each tablet contains Amlodipine 4 mg</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Dose</p>
-              <p className='text-xs md:text-sm text-gray-300'>The initial dose is 5 mg per day, Maximum 10 mg per day, Dosage titrations are
-              carried out every 7-14 days.</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>How to use</p>
-              <p className='text-xs md:text-sm text-gray-300'>Consumed before or after meals.</p>
-            </div>
-
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Packaging</p>
-              <p className='text-xs md:text-sm text-gray-300'>Box, 5 Strips @ 10 Tablets</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Counter Indication</p>
-              <p className='text-xs md:text-sm text-gray-300'>Patients who are hypersensitive to amlodipine and other dihydropirydine groups.</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Attention</p>
-              <p className='text-xs md:text-sm text-gray-300'>ON MEDICAL PRESCRIPTION. Close monitoring of patients with impaired
-              liver function and congestive heart failure.</p>
-            </div>
-          </div>
+      <section className="pt-8 w-10/12 mx-auto">
+      <div>
+        <div className="mb-4 items-center justify-between whitespace-nowrap overflow-hidden w-full md:flex md:w-auto md:order-1">
+          <ul
+            className="scroll-smooth mx-auto flex font-normal overflow-y-auto pb-1 lg:font-medium md:flex-row space-x-2 lg:space-x-8 scroll-style [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+            role="tablist"
+          >
+            {tabs.map((tab) => (
+              <li key={tab.id} className="me-2" role="presentation">
+                <button
+                  className={`inline-block p-4 border-b-2 rounded-t-lg ${
+                    activeTab === tab.id
+                      ? "border-orange-600 text-orange-600"
+                      : "hover:text-gray-300 hover:border-gray-300 text-gray-300 dark:hover:text-gray-300"
+                  }`}
+                  id={`${tab.id}-tab`}
+                  type="button"
+                  role="tab"
+                  aria-controls={tab.id}
+                  aria-selected={activeTab === tab.id}
+                  onClick={() => handleTabClick(tab.id)}
+                >
+                  {tab.label}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
-
-      <section className='pt-8 md:pt-16'>
-        <div className='w-10/12 flex  md:flex-row flex-col gap-2 mx-auto'>
-          <div className='md:w-1/2 py-2 md:px-12 flex flex-col gap-6 justify-center'>
-            <p className='md:text-2xl font-semibold text-xl text-white'>More About Acetylcysteine</p>
-
-            <div>
-              <p className='text-xs md:text-sm text-gray-300'>This drug is perfect for those of you who are experiencing fatigue and also</p>
-              <p className='text-xs md:text-sm text-gray-300'>always staying up late because this drug contains so much vitamin C</p>
+        <div id="default-tab-content" className="lg:w-9/12 mx-auto">
+          {tabs.map((tab) => (
+            <div
+              key={tab.id}
+              className={`rounded-lg ${activeTab === tab.id ? "block" : "hidden"}`}
+              id={tab.id}
+              role="tabpanel"
+              aria-labelledby={`${tab.id}-tab`}
+            >
+              <div>
+                <div className="grid lg:grid-cols-3 grid-cols-2 flex items-center gap-4 py-5 px-4 md:px-0">
+                  <div className="rounded-2xl flex items-center justify-center image-content cursor-pointer lg:mb-0 justify-center lg:h-60 md:h-28 overflow-hidden">
+                    <img
+                      alt=""
+                      className="max-w-full h-auto rounded-xl"
+                      src="https://assets.growith.io/Industry/straunt/banners/AtithiGrillandBar_home_banner_42.png"
+                    />
+                  </div>
+                  <div className="sm:text-center lg:text-left col-span-2">
+                    <h2 className="md:my-6 text-lg tracking-tight font-medium text-gray-300 sm:text-xl md:text-4xl">
+                      
+                    </h2>
+                    <p className="text-gray-600 font-normal md:text-md text-md">
+                      {tab.content}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <p className='text-xs md:text-sm text-gray-300'>This drug is a good medicine to help your child's growth, so that it can
-              increase</p>
-              <p className='text-xs md:text-sm text-gray-300'>appetite and also make your body taller and more muscular, make your
-              brain</p>
-              <p className='text-xs md:text-sm text-gray-300'>smart and also good for eye health and hair health so you will look</p>
-            </div>
-
-            <div className='w-full h-40 bg-gray-300 rounded-lg'>
-
-            </div>
-          </div>
-          <div className='md:w-1/2 py-2 md:px-12 flex flex-col gap-4'>
-          <p className='md:text-xl font-semibold text-lg text-gray-300'>Material Contained</p>
-          
-          <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Categories</p>
-              <p className='text-xs md:text-sm text-gray-300'>Drugs and Vitamin</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Composisi</p>
-              <p className='text-xs md:text-sm text-gray-300'>Each tablet contains Amlodipine 4 mg</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Dose</p>
-              <p className='text-xs md:text-sm text-gray-300'>The initial dose is 5 mg per day, Maximum 10 mg per day, Dosage titrations are
-              carried out every 7-14 days.</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>How to use</p>
-              <p className='text-xs md:text-sm text-gray-300'>Consumed before or after meals.</p>
-            </div>
-
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Packaging</p>
-              <p className='text-xs md:text-sm text-gray-300'>Box, 5 Strips @ 10 Tablets</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Counter Indication</p>
-              <p className='text-xs md:text-sm text-gray-300'>Patients who are hypersensitive to amlodipine and other dihydropirydine groups.</p>
-            </div>
-            <div>
-              <p className='text-sm md:text-lg font-medium text-gray-300'>Attention</p>
-              <p className='text-xs md:text-sm text-gray-300'>ON MEDICAL PRESCRIPTION. Close monitoring of patients with impaired
-              liver function and congestive heart failure.</p>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
     </section>
 
+      <section className="p-4 pt-8 md:pt-16">
+      <div className="md:w-10/12 mx-auto">
+        <div className="flex items-center justify-between">
+          <h2 className="text-white text-2xl">Trending Products</h2>
+        </div>
+        <div className="px-5 md:px-0 flex flex-col py-10">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {displayedProducts.map((product, index) => (
+              <FadeUp>
+                <div key={index} className="bg-gray-200 h-32 w-full rounded-lg shadow flex items-center justify-center">
+                
+                <img src={product.img} className='w-full h-full object-cover rounded-lg' alt="" />
+                {/* <p className="text-gray-800 font-normal text-sm text-center mt-2 p-1.5">
+                  {product}
+                </p> */}
+              </div>
+              </FadeUp>
+            ))}
+          </div>
+          <div className="mx-auto">
+            <button
+              onClick={handleToggle}
+              className="text-blue-500 hover:underline mt-4"
+            >
+              {showMore ? 'View less' : 'View more'}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section className="pt-8 md:pt-12">
+        <div className="w-10/12 rounded-lg mx-auto p-5 h-80 md:h-[50vh] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
+         
+          <h1 className="md:text-3xl text-2xl font-bold mb-4 md:mb-8">
+          <ZoomIn options={{threshold: 0.3}} >
+
+            Transform Your Vision with Our Quartz
+          </ZoomIn>
+          </h1>
+          <p className="text-sm mb-4 font-normal text-gray-300 md:w-10/12">
+          <ZoomIn>
+
+            At SaravApex, we take pride in being a trusted global producer and
+            supplier of quartz and other industrial minerals. We specialize in
+            the excavation, refinement
+          </ZoomIn>
+          </p>
+            <FadeUp>
+          <button 
+          onClick={()=>{navigate('/contact-us')}}
+          className="bg-white text-sm font-medium text-gray-700 text-black mt-2 px-4 py-1.5 md:px-6 md:py-2 rounded-lg hover:bg-gray-200">
+            Let's Connect
+
+          </button>
+            </FadeUp>
+        </div>
+      </section>
+
+      <br />
+
+    </section>
   )
 }
 

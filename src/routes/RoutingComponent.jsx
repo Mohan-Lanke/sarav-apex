@@ -12,7 +12,7 @@ const RoutingComponent = () => {
     <Routes>
       <Route path="/" element={<OurStory />} />
       <Route path="/why-sarav" element={<WhySarav />} />
-      <Route path="/products" element={<Products />} />
+      <Route path="/products/:id?" element={<Products />} />
       <Route path="/infrastructre" element={<Infrastructure />} />
       <Route path="/industries" element={<Industries />} />
       <Route path="/contact-us" element={<ContactUs />} />
