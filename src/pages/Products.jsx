@@ -157,7 +157,7 @@ const Products = () => {
                     <img
                       alt=""
                       className="max-w-full h-auto rounded-xl"
-                      src="https://assets.growith.io/Industry/straunt/banners/AtithiGrillandBar_home_banner_42.png"
+                      src="https://5.imimg.com/data5/ANDROID/Default/2020/11/AF/QP/KQ/63001820/product-jpeg-500x500.jpg"
                     />
                   </div>
                   <div className="sm:text-center lg:text-left col-span-2">

@@ -185,7 +185,9 @@ const OurStory = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-8 md:px-16">
           {/* Image Box */}
           <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0 px-5">
-            <div className="w-full h-64 md:h-80 bg-orange-400 border-4 border-white"></div>
+            <div className="w-full h-64 md:h-80 bg-orange-400 border-4 border-white">
+              <img className="h-full" src="https://catalog.wlimg.com/1/1135263/full-images/quartz-mines-3-3293443.jpg" alt="" />
+            </div>
           </div>
 
           {/* Text Section */}
