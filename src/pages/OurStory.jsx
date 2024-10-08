@@ -299,12 +299,12 @@ const OurStory = () => {
       </section>
       {/* vision and mission */}
       <section className="bg-transparent h-full pt-8 md:pt-12">
-        <div className="md:w-9/12 lg:7/12 h-screen md:h-96 p-4 mx-auto grid md:grid-cols-2 gap-2 md:mt-16">
+        <div className="sm:!w-11/12 md:w-9/12 lg:7/12 h-auto md:h-96 p-4 mx-auto grid md:grid-cols-2 gap-2 md:mt-16">
           <FadeLeft>
           <div className=" bg-[#36B37E] bg-opacity-20 h-full rounded-md  md:relative flex flex-col items-center justify-center p-4 md:p-2">
             <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
-              <div className="h-64 bg-orange-300 w-8/12 rounded-lg  "></div>
-              <div className="w-8/12 !text-center">
+              <div className="h-64 bg-orange-300 w-11/12 md:w-8/12 rounded-lg  "></div>
+              <div className="md:w-8/12 !text-center">
                 <p className="text-lg font-medium text-gray-300">Vision</p>
                 <p className="text-sm font-normal text-gray-300">
                 To be the leading global provider of Minerals, recognized for our commitment to excellent customer satisfaction and sustainable practices.
@@ -316,9 +316,9 @@ const OurStory = () => {
           <FadeRight>
           <div className="bg-[#33C6FC] bg-opacity-20 h-full rounded-md md:relative flex flex-col items-center justify-center p-4 md:p-2">
             <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
-              <div className="h-64 bg-orange-300 w-8/12 rounded-lg  "></div>
-              <div className="w-8/12 !text-center">
-                <p className="text-lg font-medium text-gray-300">Vision</p>
+              <div className="h-64 bg-orange-300 w-11/12 md:w-8/12 rounded-lg  "></div>
+              <div className="md:w-8/12 !text-center">
+                <p className="text-lg font-medium text-gray-300">Mission</p>
                 <p className="text-sm font-normal text-gray-300">
                 To provide high-quality minerals that meet our customers' needs while being kind to the environment.
                 </p>
@@ -372,7 +372,7 @@ const OurStory = () => {
             </div>
 
             {/* Quote Icon */}
-            <div className="absolute bottom-0 right-10 md:right-44 text-orange-500 opacity-80">
+            <div className="absolute bottom-0 right-10 lg:right-44 text-orange-500 opacity-80">
               <FadeRight>
               <FaQuoteLeft size={60} />
               </FadeRight>

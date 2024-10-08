@@ -13,7 +13,7 @@ const FooterComponent = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-300 py-8 border-t border-gray-800">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 xl:gap-8">
       <div className="flex items-center pb-5">
                 <img
                 onClick={() => {
@@ -44,11 +44,11 @@ const FooterComponent = () => {
         <div>
           <h2 className="text-lg font-semibold mb-4">Contact Info</h2>
           <ul>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex flex-wrap items-center">
               <FaEnvelope className="mr-2" />
               <span className='text-gray-300'>domesticenquiries@saravapex.com</span>
             </li>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex flex-wrap items-center">
               <FaEnvelope className="mr-2" />
               <span className='text-gray-300'>globalenquiries@saravapex.com</span>
             </li>
@@ -56,7 +56,7 @@ const FooterComponent = () => {
               <FaPhone className="mr-2" />
               <span className='text-gray-300'>+91 44 4720 1268</span>
             </li> */}
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex flex-wrap items-center">
               <span className='text-gray-300'>E-31, Madhura Nagar, near Vellanki foods.</span>
             </li>
           </ul>
