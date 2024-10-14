@@ -1,8 +1,20 @@
-import React, { useState } from "react";
-import { FadeIn, FadeOut, FadeLeft, FadeRight, FadeUp, FadeDown, ZoomIn, ZoomOut } from "../Common/animations";
+import React, { useState,useEffect } from "react";
+import {
+  FadeIn,
+  FadeOut,
+  FadeLeft,
+  FadeRight,
+  FadeUp,
+  FadeDown,
+  ZoomIn,
+  ZoomOut,
+} from "../Common/animations";
 const WhySarav = () => {
   const [activeTab, setActiveTab] = useState("Quality Assurance");
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   const tabs = [
     {
       id: "Quality Assurance",
@@ -28,6 +40,24 @@ const WhySarav = () => {
       content:
         "Our robust supply chain and logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.",
     },
+    {
+      id: "Team of Industry Experts",
+      label: "Team of Industry Experts",
+      content:
+        " logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.",
+    },
+    {
+      id: "Technical Support",
+      label: "Technical Support",
+      content:
+        " logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.",
+    },
+    {
+      id: "Environmental Responsibility",
+      label: "Environmental Responsibility",
+      content:
+        " logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.",
+    },
   ];
   return (
     <div className="bg-gray-900 h-full">
@@ -38,36 +68,34 @@ const WhySarav = () => {
           alt="mining site"
         />
 
-       
         <div className="absolute w-full h-full flex flex-col gap-4 items-center justify-center items-center">
-        <FadeIn>
-          <p className="uppercase text-sm text-black font-semibold tracking-widest ">
-            Introducing Saravapex
-          </p>
+          <FadeIn>
+            <p className="uppercase text-sm text-black font-semibold tracking-widest ">
+              Introducing Saravapex
+            </p>
           </FadeIn>
           <ZoomIn>
-          <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
-          Transform Your Vision
-          </h2>
+            <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
+              Transform Your Vision
+            </h2>
           </ZoomIn>
           <ZoomIn>
-          <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
-          with Our Quartz
-          </h2>
+            <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
+              with Our Quartz
+            </h2>
           </ZoomIn>
           <FadeUp>
-          <button
-            type="button"
-            className=" mt-3 uppercase text-white bg-orange-400 max-w-40 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
-          >
-            Request a Demo
-          </button>
+            <button
+              type="button"
+              className=" mt-3 uppercase text-white bg-orange-400 max-w-40 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+            >
+              Request a Demo
+            </button>
           </FadeUp>
         </div>
-        
       </div>
-      
-      <section className="pt-8 pb-12 w-10/12 mx-auto">
+
+      {/* <section className="pt-8 pb-12 w-10/12 mx-auto">
         <div>
           <div className="mb-4 items-center justify-between whitespace-nowrap overflow-hidden w-full md:flex md:w-auto md:order-1">
             <ul
@@ -113,9 +141,9 @@ const WhySarav = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section class="lg:py-16 md:py-12 py-8 relative">
+      {/* <section class="lg:py-16 md:py-12 py-8 relative">
         <div class="w-10/12 max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div class="w-full justify-start items-center md:gap-12 gap-5 grid grid-cols-1">
             <div class="flex flex-col items-center md:flex-row md:space-x-5 md:space-y-0 mx-auto p-3 relative rounded-xl space-y-3">
@@ -130,7 +158,6 @@ const WhySarav = () => {
               </div>
 
               <div class=" flex flex-col md:w-1/2 p-3 space-y-2 w-full">
-                {/* <FadeRight duration={2} > */}
                 <p class="lg:text-3xl text-gray-300 font-medium">
                   <FadeRight>Team of Industry Experts -</FadeRight>
                 </p>
@@ -147,7 +174,6 @@ const WhySarav = () => {
                   trading worldwide.
                   </FadeRight>
                 </p>
-                {/* </FadeRight> */}
               </div>
             </div>
 
@@ -221,6 +247,140 @@ const WhySarav = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="pt-8 pb-12 w-10/12 mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-24">
+          <div className="md:col-span-2">
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                  Quality Assurance
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              We focus on delivering high quality and consistency. Our quartz is carefully sourced from certified mines and undergoes strict quality checks to ensure its purity and precision. Using modern processing methods and following global standards, we provide different grades of quartz to meet the needs of our domestic and international clients, every time.
+              </p>
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                Exports 
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              we pride ourselves on our extensive export expertise in the global quartz market. Our dedicated team ensures that our high-quality quartz products meet the diverse needs of clients across countries such as China, Malaysia, Vietnam, Korea, Japan, Bhutan, Thailand, the USA, Bangladesh, and the UAE. With a robust logistics network and a commitment to customer satisfaction, we deliver unparalleled service and reliability. Partner with us to experience excellence in quartz trading on a global scale. Your trusted source for quality quartz awaits!
+              </p>
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                Good Value for money
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!
+              </p>
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                Timely Delivery
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              Our robust supply chain and logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.
+              </p>
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                Team of Industry Experts
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.
+              </p>
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                Technical Support
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+                At SaravApex, we take pride in being a trusted global producer
+                and supplier of quartz and other industrial minerals. We
+                specialize in the excavation, refinement, sourcing, processing
+                and export of minerals tailored to meet the specific needs of
+                diverse industries worldwide. With vast reserves, we
+                consistently deliver high-quality minerals in both processed and
+                lump forms, ensuring timely service for our domestic and
+                internationalAt SaravApex, we take pride in being a trusted
+                global producer and supplier of quartz and other industrial
+                minerals. We specialize in the excavation, refinement, sourcing,
+                processing and export of minerals tailored to meet the specific
+                needs of diverse industries worldwide. With vast reserves, we
+                consistently
+              </p>
+            </FadeUp>
+          </div>
+          <div>
+            <FadeUp>
+              <div className="flex items-center justify-start gap-4">
+                <div className="w-24 h-24 bg-gray-300 rounded-lg">
+                  <img src="img" alt="" />
+                </div>
+                <p className="text-2xl font-semibold text-gray-300">
+                Environmental Responsibility
+                </p>
+              </div>
+              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+                At SaravApex, we take pride in being a trusted global producer
+                and supplier of quartz and other industrial minerals. We
+                specialize in the excavation, refinement, sourcing, processing
+                and export of minerals tailored to meet the specific needs of
+                diverse industries worldwide. With vast reserves, we
+                consistently deliver high-quality minerals in both processed and
+                lump forms, ensuring timely service for our domestic and
+                internationalAt SaravApex, we take pride in being a trusted
+                global producer and supplier of quartz and other industrial
+                minerals. We specialize in the excavation, refinement, sourcing,
+                processing and export of minerals tailored to meet the specific
+                needs of diverse industries worldwide. With vast reserves, we
+                consistently
+              </p>
+            </FadeUp>
           </div>
         </div>
       </section>

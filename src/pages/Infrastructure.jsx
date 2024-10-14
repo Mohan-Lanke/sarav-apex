@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FadeIn,
   FadeOut,
@@ -22,6 +22,9 @@ const infastructure_data = [
   {id:7,label:'Storage & Packing',value:'storage',img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0XII_46rbQQsy16vHi1qDJcdaFYcvzsTJlA&s'},
 ]
 
+useEffect(()=>{
+  window.scrollTo(0, 0);
+},[])
   const toggleMenu = (id,path) => {
     console.log(id)
     console.log(path)

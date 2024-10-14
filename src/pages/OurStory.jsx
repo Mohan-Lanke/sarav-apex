@@ -57,6 +57,9 @@ const OurStory = () => {
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   const testimonial_settings = {
     dots: true,
@@ -299,7 +302,7 @@ const OurStory = () => {
       </section>
       {/* vision and mission */}
       <section className="bg-transparent h-full pt-8 md:pt-12">
-        <div className="sm:w-11/12 md:w-10/12 lg:9/12 h-auto md:h-96 p-4 mx-auto grid md:grid-cols-2 gap-2 md:mt-16">
+        <div className="sm:w-11/12 md:w-9/12 lg:9/12 h-auto md:h-96 p-4 mx-auto grid md:grid-cols-2 gap-2 md:mt-16">
           <FadeLeft>
           <div className=" bg-[#36B37E] bg-opacity-20 h-full rounded-md  md:relative flex flex-col items-center justify-center p-4 md:p-2">
             <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
