@@ -89,24 +89,24 @@ const HeaderComponent = () => {
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
                   >
-                    ● Quartz Grits
+                    ● Quartz Grits/Grains
                   </a>
-                  <a
+                  {/* <a
                     onClick={() => {
                       toggleMenu("/products/quartz_chips");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
                   >
                     ● Quartz Chips
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     onClick={() => {
                       toggleMenu("/products/quartz_grains");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
                   >
                     ● Quartz Grains
-                  </a>
+                  </a> */}
                   <a
                     onClick={() => {
                       toggleMenu("/products/quartz_sands");

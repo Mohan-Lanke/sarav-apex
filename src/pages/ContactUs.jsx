@@ -51,12 +51,13 @@ const ContactUs = () => {
 
         if (response.status == 200 || response.status == 201) {
           setLoading(false);
-          setOpenPopup(true);
+          
         }
       }).catch((error) => {
         console.error("There was an error!", error);
         setLoading(false);
       });
+      setOpenPopup(true);
     console.log("Form submitted", formData);
     // emailjs.sendForm('service_ywk2zsd', 'template_wtcwndd', form.current, 'N79SXEqRUAW2dvp7_')
     //   .then((result) => {
@@ -82,7 +83,7 @@ const ContactUs = () => {
     setOpenPopup(false);
   };
   return (
-    <div className='bg-gray-900'>
+    <div className='bg-[#1D2124]'>
     <div className="md:py-14 py-16 w-full items-center  px-6">
       <div className=" md:px-8 pt-8 md:pt-0 rounded md:w-1/2 mx-auto">
         <h1 className="text-2xl font-bold mb-6 text-gray-300 mx-auto xl:text-center">Contact Us</h1>

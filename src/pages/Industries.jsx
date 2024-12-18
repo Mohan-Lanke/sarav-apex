@@ -70,7 +70,7 @@ const Industries = () => {
   ];
 
   return (
-    <section className="bg-gray-900">
+    <section className="bg-[#1D2124]">
       <div className="w-full p-5 h-80 md:h-[calc(100vh-72px)] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
         <h1 className="md:text-5xl text-2xl font-bold mb-4 md:mb-8">
           Quartz Solutions That Bring Your Vision to Life.

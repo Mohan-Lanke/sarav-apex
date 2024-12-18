@@ -39,6 +39,12 @@
   }
 }
 
+
+.slick-dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .fade-up {
   animation: fadeUp 1s ease-out forwards;
 }

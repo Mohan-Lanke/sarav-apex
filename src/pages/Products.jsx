@@ -9,6 +9,10 @@ import {
   ZoomIn,
   ZoomOut,
 } from "../Common/animations";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useNavigate, useParams } from "react-router-dom";
 import ceramic from "../assets/industries/Ceramic.jpg";
 import constr_chem from "../assets/industries/constr_Chem.jpg";
@@ -20,6 +24,13 @@ import pestiside_coating from "../assets/industries/pestiside_coating.jpeg";
 import rubber from "../assets/industries/Rubber.jpg";
 import solar_modules from "../assets/industries/solar_modules.jpeg";
 import tiles from "../assets/industries/tiles.jpeg";
+import ProductA from "../assets/product_A.mp4"
+import ProductB from "../assets/product_B.mp4"
+import ProductC from "../assets/product_C.mp4"
+import Chip from "../assets/product_chips.jpg";
+import Gritz from "../assets/product_gritz.jpg";
+import Lump from "../assets/product_lump.jpeg";
+import Sand from "../assets/product_sand.jpg";
 
 const Products = () => {
   const [showMore, setShowMore] = useState(false);
@@ -104,9 +115,77 @@ const Products = () => {
         "We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!",
     },
   ];
+
+
+
+  const Video_settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false
+  };
+
+
+
+  const ProductData = [
+    {
+      id: 1,
+      Home_Video: ProductA,
+      text: 'Unlock the Potential of Quartz for Your Most Demanding Projects'
+    },
+    {
+      id: 2,
+      Home_Video: ProductB,
+      text: 'Experience the True Potential of Quartz'
+    },
+    {
+      id: 3,
+      Home_Video: ProductC,
+      text: 'Tailored for Every Need, Engineered for Every Industry'
+    }
+  ]
+
+
+
+
+
+
+
   return (
-    <section className="bg-gray-900">
-      <div className="w-full p-5 h-80 md:h-[calc(100vh-72px)] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
+    <section className="bg-[#1D2124]">
+      <div className="W-full">
+        <Slider {...Video_settings}>
+          {ProductData.map((video) => (
+            <div key={video.id} className="relative">
+              <video style={{ height: '30rem' }}
+                className="w-full object-cover"
+                src={video.Home_Video}
+                autoPlay
+                loop
+                muted
+                playsInline
+              ></video>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <p className="text-center">
+                  <ZoomIn><span className=" md:text-4xl text-white font-bold leading-normal text-2xl">{video.text}</span></ZoomIn>
+                  <FadeUp>
+                    <button type="button" className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+                      onClick={() => { navigate("/contact-us") }} >
+                      Request a Demo
+                    </button>
+                  </FadeUp>
+                </p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* <div className="w-full p-5 h-80 md:h-[calc(100vh-72px)] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
         <h1 className="md:text-5xl text-2xl font-bold mb-4 md:mb-8">
           <ZoomIn>Quartz Solutions That Bring Your Vision to Life.</ZoomIn>
         </h1>
@@ -120,7 +199,7 @@ const Products = () => {
           <ZoomIn>See All Products</ZoomIn>
         </button>
         <div ref={(el) => (tabRefs.current[params.id] = el)}></div>
-      </div>
+      </div> */}
 
       {/* <section className="pt-8 w-10/12 mx-auto">
         <div>
@@ -188,7 +267,7 @@ const Products = () => {
         <div id="quartz-chips" className="flex flex-col md:flex-row gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
             <div className="w-8/12 h-56 mx-auto bg-gray-300 rounded-xl">
-              <img src="" alt="" />
+              <img src={Chip} alt="" />
             </div>
             <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Chips</p>
           </div>
@@ -207,7 +286,7 @@ const Products = () => {
         <div id="quartz-lumps" className="flex flex-col md:flex-row md:flex-row-reverse gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
             <div className="w-8/12 h-56 mx-auto bg-gray-300 rounded-xl">
-              <img src="" alt="" />
+              <img src={Lump} alt="" />
             </div>
             <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Lumps</p>
           </div>
@@ -226,7 +305,7 @@ const Products = () => {
         <div id="quartz-grits" className="flex flex-col md:flex-row gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
             <div className="w-8/12 h-56 mx-auto bg-gray-300 rounded-xl">
-              <img src="" alt="" />
+              <img src={Gritz} alt="" />
             </div>
             <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Grits</p>
           </div>
@@ -245,7 +324,7 @@ const Products = () => {
         <div id="quartz-sands" className="flex flex-col md:flex-row md:flex-row-reverse gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
             <div className="w-8/12 h-56 mx-auto bg-gray-300 rounded-xl">
-              <img src="" alt="" />
+              <img src={Sand} alt="" />
             </div>
             <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Sands</p>
           </div>
@@ -263,7 +342,7 @@ const Products = () => {
         </div>
       </section>
 
-      
+
       <section className="p-4 pt-8 md:pt-16">
         <div className="md:w-10/12 mx-auto">
           <div className="flex items-center justify-between">
