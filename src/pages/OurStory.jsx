@@ -11,12 +11,10 @@ import videoSrc from "../assets/sample.mp4";
 import world_map from "../assets/worldMap.png";
 import "../styles/Ourstory.css";
 import ScaleComponent from "../Common/ScaleComponent";
-import HomeA from "../assets/Homepage_A.mp4"
-import HomeB from "../assets/Homepage_B.mp4"
-import HomeC from "../assets/Homepage_C.mp4"
 import Vision_Img from "../assets/vision.jpg"
-import Mission_Img from "../assets/mission.jpg"
+import Mission_Img from "../assets/mission.jpeg"
 import { useNavigate } from 'react-router-dom';
+import HomeA from "../assets/Homepage_A.mp4"
 
 
 
@@ -182,34 +180,12 @@ const OurStory = () => {
   ];
 
   const Video_settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    infinite: false, // Disable infinite scrolling
+    slidesToShow: 1, // Show only one slide
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false
+    dots: false, // Optional: Hide dots
+    arrows: false, // Optional: Hide navigation arrows
   };
-
-
-  const HomePageData = [
-    {
-      id: 1,
-      Home_Video: HomeA,
-      text: 'Redefining Quartz Trading for the Modern World'
-    },
-    {
-      id: 2,
-      Home_Video: HomeB,
-      text: 'From the Core of the Earth to the Core of Your Business'
-    },
-    {
-      id: 3,
-      Home_Video: HomeC,
-      text: 'From Earth to Excellence - Redefining Quartz Standards'
-    }
-  ]
 
 
 
@@ -219,31 +195,35 @@ const OurStory = () => {
       {/* landing section  */}
       <div className="W-full">
         <Slider {...Video_settings}>
-          {HomePageData.map((video) => (
-            <div key={video.id} className="relative">
-              <video style={{height:'30rem'}}
-                className="w-full object-cover"
-                src={video.Home_Video}
-                autoPlay
-                loop
-                muted
-                playsInline
-              ></video>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-center">
-                  <ZoomIn><span className=" md:text-4xl text-white font-bold leading-normal text-2xl">{video.text}</span></ZoomIn>
-                  <FadeUp>
-                    <button type="button" className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
-                      onClick={() => { navigate("/contact-us") }} >
-                      Request a Demo
-                    </button>
-                  </FadeUp>
-                </p>
-              </div>
+          <div className="relative">
+            <video
+              style={{ height: '33rem' }}
+              className="w-full object-cover"
+              src={HomeA}
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+              <FadeUp>
+                <button
+                  type="button"
+                  className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+                  onClick={() => {
+                    navigate("/contact-us");
+                  }}
+                >
+                  Request a Demo
+                </button>
+              </FadeUp>
             </div>
-          ))}
+          </div>
         </Slider>
       </div>
+
+
+
 
       {/* <FadeIn>
             <p className="uppercase text-sm text-black font-semibold tracking-widest ">
@@ -493,7 +473,7 @@ const OurStory = () => {
       <section>
         <div className="bg-transparent py-10 px-6 sm:px-10 lg:px-20">
           <div className="max-w-4xl mx-auto text-white shadow-lg rounded-lg p-8">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-orange-800">
               Founder’s Message
             </h1>
             <p className="text-lg mb-4">

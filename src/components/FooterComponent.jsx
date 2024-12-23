@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { FaEnvelope, FaPhone, FaWhatsapp, FaBars, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaWhatsapp, FaBars, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 import sarav_apex from '../assets/Sarav_apex_png.png';
 import { useNavigate } from 'react-router-dom';
+import BGV_Img from '../assets/bgv_img.jpeg';
+
 
 
 const FooterComponent = () => {
@@ -25,7 +27,8 @@ const FooterComponent = () => {
   };
 
   return (
-    <footer className="bg-[#1D2124] text-gray-300 py-8 border-t border-gray-800">
+    <footer className="bg-[#1D2124] text-black-300 py-8 border-t border-gray-800 " style={{ backgroundImage: `url(${BGV_Img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
+    >
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 xl:gap-8">
         <div className="flex items-start pb-5">
           <img
@@ -40,19 +43,19 @@ const FooterComponent = () => {
         <div className='pt-4 md:pt-0'>
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
           <ul>
-            <li className='mb-2'><a onClick={() => { toggleIcons('/') }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Our Story</a></li>
-            <li className='mb-2'><a onClick={() => { toggleIcons('/why-sarav') }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Why Sarav?</a></li>
-            <li className='mb-2'><a onClick={() => { toggleIcons('/infrastructre') }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Infrastructure</a></li>
+            <li className='mb-2'><a onClick={() => { toggleIcons('/') }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Our Story</a></li>
+            <li className='mb-2'><a onClick={() => { toggleIcons('/why-sarav') }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Why Sarav?</a></li>
+            <li className='mb-2'><a onClick={() => { toggleIcons('/infrastructre') }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Infrastructure</a></li>
           </ul>
         </div>
         <div className='pt-4 md:pt-0'>
           <h2 className="text-lg font-semibold mb-4">Our Products</h2>
           <ul>
-            <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_lumps") }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Quartz Lumps</a></li>
-            <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_grits") }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Quartz Grits/Grains</a></li>
-            <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_sands") }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Quartz Sands</a></li>
-            {/* <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_chips") }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Quartz Chips</a></li> */}
-            <li className='mb-2'><a onClick={() => { toggleIcons("/products/raming_mass") }} className="hover:text-orange-500 text-gray-300 text-sm cursor-pointer">Raming Mass</a></li>
+            <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_lumps") }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Quartz Lumps</a></li>
+            <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_grits") }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Quartz Grits/Grains</a></li>
+            <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_sands") }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Quartz Sands</a></li>
+            {/* <li className='mb-2'><a onClick={() => { toggleIcons("/products/quartz_chips") }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Quartz Chips</a></li> */}
+            <li className='mb-2'><a onClick={() => { toggleIcons("/products/raming_mass") }} className="hover:text-orange-500 text-black-300 text-sm cursor-pointer">Raming Mass</a></li>
           </ul>
         </div>
         <div className='pt-4 md:pt-0'>
@@ -60,19 +63,20 @@ const FooterComponent = () => {
           <ul>
             <li className="mb-2 flex flex-wrap items-center">
               <FaEnvelope className="mr-2" />
-              <span className='text-gray-300 text-sm'>domesticenquiries@saravapex.com</span>
+              <span className='text-black-300 text-sm'>sales@saravapex.com</span>
             </li>
             <li className="mb-2 flex flex-wrap items-center">
-              <FaEnvelope className="mr-2" />
-              <span className='text-gray-300 text-sm'>globalenquiries@saravapex.com</span>
+              <FaMapMarkerAlt className="mr-2" />
+              <span className='text-black-300 text-sm'>E-31, Madhura Nagar,near Vellanki foods. </span>
+              <span className='text-black-300 text-sm'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hyderabad,Telangana-500045 </span>
             </li>
             {/* <li className="mb-2 flex items-center">
               <FaPhone className="mr-2" />
-              <span className='text-gray-300'>+91 44 4720 1268</span>
+              <span className='text-black-300'>+91 44 4720 1268</span>
             </li> */}
-            <li className="mb-2 flex flex-wrap items-center">
-              <span className='text-gray-300 text-sm'>E-31, Madhura Nagar, near Vellanki foods.</span>
-            </li>
+            {/* <li className="mb-2 flex flex-wrap items-center">
+              <span className='text-black-300 text-sm'>E-31, Madhura Nagar, near Vellanki foods.</span>
+            </li> */}
           </ul>
         </div>
         <div>
@@ -88,7 +92,7 @@ const FooterComponent = () => {
         </div>
       </div>
       <div className="fixed bottom-4 right-4 flex flex-col flex-col-reverse gap-2 space-y-4">
-        <button
+        <button style={{ backgroundColor: 'orange' }}
           onClick={() => { toggleIcons() }}
           className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none"
         >
@@ -102,7 +106,7 @@ const FooterComponent = () => {
             <a href="tel:+919840054331" className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600">
               <FaPhone />
             </a>
-            <a href="" className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600">
+            <a href="" className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600" style={{ backgroundColor: 'blue' }}>
               <FaLinkedin />
             </a>
             <a href="https://wa.me/919840054331" className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600">

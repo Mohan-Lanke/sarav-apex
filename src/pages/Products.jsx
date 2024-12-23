@@ -25,8 +25,6 @@ import rubber from "../assets/industries/Rubber.jpg";
 import solar_modules from "../assets/industries/solar_modules.jpeg";
 import tiles from "../assets/industries/tiles.jpeg";
 import ProductA from "../assets/product_A.mp4"
-import ProductB from "../assets/product_B.mp4"
-import ProductC from "../assets/product_C.mp4"
 import Chip from "../assets/product_chips.jpg";
 import Gritz from "../assets/product_gritz.jpg";
 import Lump from "../assets/product_lump.jpeg";
@@ -118,46 +116,52 @@ const Products = () => {
 
 
 
+  // const Video_settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 5000,
+  //   arrows: false
+  // };
+
+
+
+  // const ProductData = [
+  //   {
+  //     id: 1,
+  //     Home_Video: ProductA,
+  //     text: 'Unlock the Potential of Quartz for Your Most Demanding Projects'
+  //   },
+  //   {
+  //     id: 2,
+  //     Home_Video: ProductB,
+  //     text: 'Experience the True Potential of Quartz'
+  //   },
+  //   {
+  //     id: 3,
+  //     Home_Video: ProductC,
+  //     text: 'Tailored for Every Need, Engineered for Every Industry'
+  //   }
+  // ]
+
   const Video_settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    infinite: false, // Disable infinite scrolling
+    slidesToShow: 1, // Show only one slide
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false
+    dots: false, // Optional: Hide dots
+    arrows: false, // Optional: Hide navigation arrows
   };
-
-
-
-  const ProductData = [
-    {
-      id: 1,
-      Home_Video: ProductA,
-      text: 'Unlock the Potential of Quartz for Your Most Demanding Projects'
-    },
-    {
-      id: 2,
-      Home_Video: ProductB,
-      text: 'Experience the True Potential of Quartz'
-    },
-    {
-      id: 3,
-      Home_Video: ProductC,
-      text: 'Tailored for Every Need, Engineered for Every Industry'
-    }
-  ]
-
-
-
 
 
 
 
   return (
     <section className="bg-[#1D2124]">
-      <div className="W-full">
+      {/* Api through showing */}
+      {/* <div className="W-full">
         <Slider {...Video_settings}>
           {ProductData.map((video) => (
             <div key={video.id} className="relative">
@@ -183,7 +187,38 @@ const Products = () => {
             </div>
           ))}
         </Slider>
+      </div> */}
+
+
+      <div className="W-full">
+        <Slider {...Video_settings}>
+          <div className="relative">
+            <video
+              style={{ height: '33rem' }}
+              className="w-full object-cover"
+              src={ProductA}
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+              <FadeUp>
+                <button
+                  type="button"
+                  className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+                  onClick={() => {
+                    navigate("/contact-us");
+                  }}
+                >
+                  Request a Demo
+                </button>
+              </FadeUp>
+            </div>
+          </div>
+        </Slider>
       </div>
+
 
       {/* <div className="w-full p-5 h-80 md:h-[calc(100vh-72px)] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
         <h1 className="md:text-5xl text-2xl font-bold mb-4 md:mb-8">
@@ -371,7 +406,7 @@ const Products = () => {
             <div className="mx-auto">
               <button
                 onClick={handleToggle}
-                className="text-blue-500 hover:underline mt-4"
+                className="text-orange-500 hover:underline mt-4"
               >
                 {showMore ? "View less" : "View more"}
               </button>

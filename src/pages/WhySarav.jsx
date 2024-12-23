@@ -14,15 +14,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SaravA from "../assets/whysarav_A.mp4"
-import SaravB from "../assets/whysarav_B.mp4"
 import { useNavigate } from 'react-router-dom';
-import Environment from "../assets/why_evnvironment.jpg"
-import Export from "../assets/why_export.jpg"
-import Good from "../assets/why_goodvalue.jpg"
-import Quality from "../assets/why_quality.jpg"
-import Team from "../assets/why_team.jpg"
-import Technical from "../assets/why_technical.jpg"
-import Timely from "../assets/why_timely.jpg"
+import Quality from "../assets/Vector.svg"
+import Export from "../assets/Vector-1.svg"
+import Good from "../assets/Group.svg"
+import Timely from "../assets/Group-1.svg"
+import Team from "../assets/Vector-2.svg"
+import Technical from "../assets/Group-2.svg"
+import Environment from "../assets/Vector-3.svg"
 
 
 
@@ -80,34 +79,17 @@ const WhySarav = () => {
 
 
   const Video_settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    infinite: false, // Disable infinite scrolling
+    slidesToShow: 1, // Show only one slide
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false
+    dots: false, // Optional: Hide dots
+    arrows: false, // Optional: Hide navigation arrows
   };
 
 
 
-  const WhyPageData = [
-    {
-      id: 1,
-      Home_Video: SaravA,
-      text: 'We’re not just here to help, we’re here to make your process better'
-    },
-    {
-      id: 2,
-      Home_Video: SaravB,
-      text: 'Turning your feedback into our next great service moment'
-    }
-  ]
-
-
   return (
-    <div className="bg-[#1D2124] h-full">
+    <div className="bg-[#0E1112] h-full">
       {/* <div className="w-full h-80 md:h-[calc(100vh-72px)] relative overflow-hidden flex items-center justify-center">
         <img
           className="h-full w-full object-cover"
@@ -153,29 +135,30 @@ const WhySarav = () => {
 
       <div className="W-full">
         <Slider {...Video_settings}>
-          {WhyPageData.map((video) => (
-            <div key={video.id} className="relative">
-              <video style={{ height: '30rem' }}
-                className="w-full object-cover"
-                src={video.Home_Video}
-                autoPlay
-                loop
-                muted
-                playsInline
-              ></video>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-center">
-                  <ZoomIn><span className=" md:text-4xl text-white font-bold leading-normal text-2xl">{video.text}</span></ZoomIn>
-                  <FadeUp>
-                    <button type="button" className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
-                      onClick={() => { navigate("/contact-us") }} >
-                      Request a Demo
-                    </button>
-                  </FadeUp>
-                </p>
-              </div>
+          <div className="relative">
+            <video
+              style={{ height: '33rem' }}
+              className="w-full object-cover"
+              src={SaravA}
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+              <FadeUp>
+                <button
+                  type="button"
+                  className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+                  onClick={() => {
+                    navigate("/contact-us");
+                  }}
+                >
+                  Request a Demo
+                </button>
+              </FadeUp>
             </div>
-          ))}
+          </div>
         </Slider>
       </div>
 
@@ -335,117 +318,99 @@ const WhySarav = () => {
         </div>
       </section> */}
 
-      <section className="pt-8 pb-12 w-10/12 mx-auto">
+      <section className="pt-12 pb-12 w-10/12 mx-auto">
         <div className="grid md:grid-cols-2 gap-4 md:gap-24">
-          <div className="md:col-span-2">
+          <div className="space-y-8">
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Quality} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Quality} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Quality Assurance
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Quality Assurance</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
-                We focus on delivering high quality and consistency. Our quartz is carefully sourced from certified mines and undergoes strict quality checks to ensure its purity and precision. Using modern processing methods and following global standards, we provide different grades of quartz to meet the needs of our domestic and international clients, every time.
-              </p>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+                We focus on delivering high quality and consistency. Our quartz is carefully sourced from certified mines and undergoes strict quality checks to ensure its purity and precision. Using modern processing methods and following global standards, we provide different grades of quartz to meet the needs of our domestic and international clients, every time.              </p>
             </FadeUp>
-          </div>
-          <div>
+
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Export} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Export} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Exports
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Exports</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
                 we pride ourselves on our extensive export expertise in the global quartz market. Our dedicated team ensures that our high-quality quartz products meet the diverse needs of clients across countries such as China, Malaysia, Vietnam, Korea, Japan, Bhutan, Thailand, the USA, Bangladesh, and the UAE. With a robust logistics network and a commitment to customer satisfaction, we deliver unparalleled service and reliability. Partner with us to experience excellence in quartz trading on a global scale. Your trusted source for quality quartz awaits!
               </p>
             </FadeUp>
-          </div>
-          <div>
+
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Good} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Good} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Good Value for money
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Good Value for Money</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
-                We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!
-              </p>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+                We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!              </p>
             </FadeUp>
-          </div>
-          <div>
+
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Timely} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Timely} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Timely Delivery
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Timely Delivery</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
                 Our robust supply chain and logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.
               </p>
             </FadeUp>
           </div>
-          <div>
+
+          {/* Right Column: 3 Cards */}
+          <div className="space-y-8">
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Team} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Team} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Team of Industry Experts
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Team of Industry Experts</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
                 SaravApex is powered by a team of experts in geology, logistics, quality control, and trade compliance, ensuring top-tier quartz products and reliable global delivery. Our specialists in finance and legal services guarantee secure, transparent transactions, while our technical advisors and business development team offer custom solutions across industries. Trust SaravApex for expert-driven, seamless quartz trading worldwide.
               </p>
             </FadeUp>
-          </div>
-          <div>
+
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Technical} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Technical} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Technical Support
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Technical Support</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
-                Our technical expertise optimizes extraction processes, enhancing efficiency and minimizing waste for high-quality quartz sourcing. We maintain rigorous quality control through testing and analysis to protect product integrity. Technical support includes equipment maintenance, reducing downtime and boosting operational efficiency, along with staff training to enhance safety and productivity. <br></br>
-                This robust support enables SaravApex to swiftly address challenges, minimizing disruptions. Together, we drive success in the quartz industry.
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+                Our technical expertise optimizes extraction processes, enhancing efficiency and minimizing waste for high-quality quartz sourcing. We maintain rigorous quality control through testing and analysis to protect product integrity. Technical support includes equipment maintenance, reducing downtime and boosting operational efficiency, along with staff training to enhance safety and productivity.
 
+                This robust support enables SaravApex to swiftly address challenges, minimizing disruptions. Together, we drive success in the quartz industry.
               </p>
             </FadeUp>
-          </div>
-          <div>
+
             <FadeUp>
               <div className="flex items-center justify-start gap-4">
-                <div className="w-24 h-24 bg-gray-300 rounded-lg">
-                  <img src={Environment} alt="" className="h-full" />
+                <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
+                  <img src={Environment} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-2xl font-semibold text-gray-300">
-                  Environmental Responsibility
-                </p>
+                <p className="text-1xl font-semibold text-gray-300">Environmental Responsibility</p>
               </div>
-              <p className="text-md text-gray-400 font-normal pt-4 md:pt-8">
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
                 At SaravApex, we prioritize environmental responsibility in our quartz extraction and trading practices. We use sustainable mining techniques to minimize ecological impact, protect biodiversity, and manage resources efficiently. Our efforts include pollution control, community engagement, regulatory compliance, and land restoration post-mining. By integrating these principles, we contribute to a healthier planet while fulfilling industry needs.
               </p>
             </FadeUp>
           </div>
         </div>
       </section>
+
     </div>
   );
 };

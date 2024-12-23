@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sarav_apex from "../assets/Sarav_apex_png.png";
+import BGV_Img from '../assets/bgv_img.jpeg';
+
 
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +19,7 @@ const HeaderComponent = () => {
   }
   return (
     <>
-      <header className="bg-white shadow-md sticky top-0 z-50">
+      <header className="bg-white shadow-md sticky top-0 z-50" style={{ backgroundImage: `url(${BGV_Img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         <section className="w-full mx-auto ">
           <div className="container mx-auto flex justify-between items-center p-4">
             {/* Logo Section */}
@@ -271,24 +273,24 @@ const HeaderComponent = () => {
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
                   >
-                    ● Quartz Grits
+                    ● Quartz Grits/Grains
                   </a>
-                  <a
+                  {/* <a
                     onClick={() => {
                       toggleMenu("/products/quartz_chips");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
                   >
                     ● Quartz Chips
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     onClick={() => {
                       toggleMenu("/products/quartz_grains");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
                   >
                     ● Quartz Grains
-                  </a>
+                  </a> */}
                   <a
                     onClick={() => {
                       toggleMenu("/products/quartz_sands");

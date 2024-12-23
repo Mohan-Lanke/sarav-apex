@@ -14,11 +14,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import InfraA from "../assets/infrastructure_A.mp4"
-import InfraB from "../assets/infrastructure_B.mp4"
-import InfraC from "../assets/infrastructure_C.mp4"
 import { useNavigate } from 'react-router-dom';
-
-
 
 
 const Infrastructure = () => {
@@ -47,41 +43,13 @@ const Infrastructure = () => {
   };
 
 
-
-
-
   const Video_settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    infinite: false, // Disable infinite scrolling
+    slidesToShow: 1, // Show only one slide
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false
+    dots: false, // Optional: Hide dots
+    arrows: false, // Optional: Hide navigation arrows
   };
-
-
-
-  const InfraData = [
-    {
-      id: 1,
-      Home_Video: InfraA,
-      text: 'From Mines to Markets: Infrastructure That Powers Global Quartz Solutions'
-    },
-    {
-      id: 2,
-      Home_Video: InfraB,
-      text: 'The Perfect Fusion of Art and Engineering'
-    },
-    {
-      id: 3,
-      Home_Video: InfraC,
-      text: 'Engineered for Excellence – Where Quartz Meets Precision in Infrastructure'
-    }
-  ]
-
-
 
 
 
@@ -120,31 +88,32 @@ const Infrastructure = () => {
           </FadeUp>
         </div>
       </div> */}
-      <div className="W-full">
+    <div className="W-full">
         <Slider {...Video_settings}>
-          {InfraData.map((video) => (
-            <div key={video.id} className="relative">
-              <video style={{ height: '30rem' }}
-                className="w-full object-cover"
-                src={video.Home_Video}
-                autoPlay
-                loop
-                muted
-                playsInline
-              ></video>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-center">
-                  <ZoomIn><span className=" md:text-4xl text-white font-bold leading-normal text-2xl">{video.text}</span></ZoomIn>
-                  <FadeUp>
-                    <button type="button" className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
-                      onClick={() => { navigate("/contact-us") }} >
-                      Request a Demo
-                    </button>
-                  </FadeUp>
-                </p>
-              </div>
+          <div className="relative">
+            <video
+              style={{ height: '33rem' }}
+              className="w-full object-cover"
+              src={InfraA}
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+              <FadeUp>
+                <button
+                  type="button"
+                  className="mt-3 uppercase text-white bg-orange-400 max-w-30 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
+                  onClick={() => {
+                    navigate("/contact-us");
+                  }}
+                >
+                  Request a Demo
+                </button>
+              </FadeUp>
             </div>
-          ))}
+          </div>
         </Slider>
       </div>
 

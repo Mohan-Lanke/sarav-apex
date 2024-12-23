@@ -172,7 +172,7 @@ const Industries = () => {
           <div className="mx-auto">
             <button
               onClick={handleToggle}
-              className="text-blue-500 hover:underline mt-4"
+              className="text-orange-500 hover:underline mt-4"
             >
               {showMore ? 'View less' : 'View more'}
             </button>
