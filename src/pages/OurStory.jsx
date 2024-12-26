@@ -17,7 +17,6 @@ import { useNavigate } from 'react-router-dom';
 import HomeA from "../assets/Homepage_A.mp4"
 
 
-
 const items = [
   { shortText: "A", fullText: "Apple" },
   { shortText: "B", fullText: "Banana" },
@@ -339,7 +338,7 @@ const OurStory = () => {
               <>
                 <div
                   key={item.id}
-                  className="flex flex-col items-center items-center"
+                  className="flex flex-col items-center"
                 >
                   <p className="text-xl md:text-3xl text-white font-bold flex items-center gap-x-2">
                     <NumberAnimation value={item.count} /> {item.addOn}
@@ -471,7 +470,7 @@ const OurStory = () => {
       </section> */}
 
       <section>
-        <div className="bg-transparent py-10 px-6 sm:px-10 lg:px-20">
+        <div className="bg-transparent py-10 px-6 sm:px-10 lg:px-20 mt-13">
           <div className="max-w-4xl mx-auto text-white shadow-lg rounded-lg p-8">
             <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-orange-800">
               Founder’s Message

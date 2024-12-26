@@ -55,39 +55,6 @@ const Infrastructure = () => {
 
   return (
     <div className="bg-[#1D2124]">
-      {/* <div className="w-full h-80 md:h-[calc(100vh-72px)] relative overflow-hidden flex items-center justify-center">
-        <img
-          className="h-full w-full object-cover"
-          src="https://cdn-rio.dataweavers.io/-/media/content/images/news/rt-mining-pit.jpg?rev=5f747b008b624ebc848dd421004f0965&w=1920&hash=4087A1C934DD418C203734373713F55E"
-          alt="mining site"
-        />
-
-        <div className="absolute w-full h-full flex flex-col gap-4 items-center justify-center items-center">
-          <FadeIn>
-            <p className="uppercase text-sm text-black font-semibold tracking-widest ">
-              Introducing Saravapex
-            </p>
-          </FadeIn>
-          <ZoomIn>
-            <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
-              The Best Mining for the
-            </h2>
-          </ZoomIn>
-          <ZoomIn>
-            <h2 className="md:text-7xl text-2xl font-bold leading-normal text-center md:text-left ">
-              Digital Age
-            </h2>
-          </ZoomIn>
-          <FadeUp>
-            <button
-              type="button"
-              className=" mt-3 uppercase text-white bg-orange-400 max-w-40 focus:ring-2 focus:ring-orange-300 rounded-lg text-xs md:text-sm px-5 py-2.5 focus:outline-none"
-            >
-              Request a Demo
-            </button>
-          </FadeUp>
-        </div>
-      </div> */}
     <div className="W-full">
         <Slider {...Video_settings}>
           <div className="relative">

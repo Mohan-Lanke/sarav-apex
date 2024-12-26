@@ -43,7 +43,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/")
                 }}
-                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
+                className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Our Story
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -52,7 +52,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/why-sarav");
                 }}
-                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
+                className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Why Sarav?
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -131,7 +131,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/infrastructre");
                 }}
-                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
+                className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Infrastructure
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -149,7 +149,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/contact-us");
                 }}
-                className="relative relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
+                className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
               >
                 Contact
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -224,7 +224,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/");
                 }}
-                className="block relative relative group/border cursor-pointer text-orange-600 hover:text-blue-500 transition duration-500 py-2"
+                className="block relative group/border cursor-pointer text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Our Story
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -234,7 +234,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/why-sarav");
                 }}
-                className="block relative relative group/border cursor-pointer text-orange-600 hover:text-blue-500 transition duration-500 py-2"
+                className="block relative group/border cursor-pointer text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Why Sarav?
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -258,7 +258,7 @@ const HeaderComponent = () => {
                   </svg>
                   <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:w-full group-hover:left-0"></span>
                 </a>
-                <div className="absolute bg-white z-10 left-0 hidden pt-2 w-48 bg-white shadow-lg group-hover:block rounded-lg">
+                <div className="absolute bg-white z-10 left-0 hidden pt-2 w-48 shadow-lg group-hover:block rounded-lg">
                   <a
                     onClick={() => {
                       toggleMenu("/products/quartz_lumps");
@@ -314,7 +314,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/infrastructre");
                 }}
-                className="block relative relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
+                className="block  relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Infrstructure
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
@@ -334,7 +334,7 @@ const HeaderComponent = () => {
                 onClick={() => {
                   toggleMenu("/contact-us");
                 }}
-                className="block relative relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
+                className="block relative group/border cursor-pointer !text-orange-600 hover:text-blue-500 transition duration-500 py-2"
               >
                 Contact
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
