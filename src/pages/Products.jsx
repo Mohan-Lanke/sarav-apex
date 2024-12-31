@@ -9,6 +9,8 @@ import {
   ZoomIn,
   ZoomOut,
 } from "../Common/animations";
+import Products_slider from "../Common/Products_slider";
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -219,7 +221,7 @@ const Products = () => {
               muted
               playsInline
             ></video>
-            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+            {/* <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
               <FadeUp>
                 <button
                   type="button"
@@ -231,7 +233,7 @@ const Products = () => {
                   Request a Demo
                 </button>
               </FadeUp>
-            </div>
+            </div> */}
           </div>
         </Slider>
       </div>
@@ -320,10 +322,10 @@ const Products = () => {
 
         <div id="quartz_lumps" className="flex flex-col md:flex-row gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
-            <div className="w-8/12 h-45 mx-auto bg-gray-300 rounded-xl">
-              <img src={Lump} alt="" />
+            <div className="w-8/12 h-45 mx-auto rounded-xl">
+              <img src={Lump} alt="" className="rounded-2xl"/>
             </div>
-            <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Lumps</p>
+            <p className="text-2xl text-orange-600 font-semibold text-center mt-4" style={{ fontFamily: 'Rubik, sans-serif' }}>Quartz Lumps</p>
           </div>
           <div className="px-8 flex items-center justify-center basis-7/12">
             <p className="text-gray-400 font-normal md:text-md text-md text-justify">
@@ -334,10 +336,10 @@ const Products = () => {
 
         <div id="quartz_grits" className="flex flex-col md:flex-row md:flex-row-reverse gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
-            <div className="w-8/12 h-45 mx-auto bg-gray-300 rounded-xl">
-              <img src={Gritz} alt="" />
+            <div className="w-8/12 h-45 mx-auto  rounded-xl">
+              <img src={Gritz} alt="" className="rounded-2xl"/>
             </div>
-            <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Grits</p>
+            <p className="text-2xl text-orange-600 font-semibold text-center mt-4" style={{ fontFamily: 'Rubik, sans-serif' }}>Quartz Grits</p>
           </div>
           <div className="px-8 flex items-center justify-center basis-7/12">
             <p className="text-gray-400 font-normal md:text-md text-md text-justify">
@@ -348,10 +350,10 @@ const Products = () => {
 
         <div id="quartz_sands" className="flex flex-col md:flex-row gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
-            <div className="w-8/12 h-45 mx-auto bg-gray-300 rounded-xl">
-              <img src={Sand} alt="" />
+            <div className="w-8/12 h-45 mx-auto  rounded-xl">
+              <img src={Sand} alt="" className="rounded-2xl"/>
             </div>
-            <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Quartz Sands</p>
+            <p className="text-2xl text-orange-600 font-semibold text-center mt-4" style={{ fontFamily: 'Rubik, sans-serif' }}>Quartz Sands</p>
           </div>
           <div className="px-8 flex items-center justify-center basis-7/12">
             <p className="text-gray-400 font-normal md:text-md text-md text-justify">
@@ -362,10 +364,10 @@ const Products = () => {
 
         <div id="raming_mass" className="flex flex-col md:flex-row md:flex-row-reverse gap-2 pt-8 md:pt-12">
           <div className="basis-5/12">
-            <div className="w-8/12 h-45 mx-auto bg-gray-300 rounded-xl">
-              <img src={Mass} alt="" />
+            <div className="w-8/12 h-45 mx-auto  rounded-xl">
+              <img src={Mass} alt="" className="rounded-2xl"/>
             </div>
-            <p className="text-2xl text-orange-600 font-semibold text-center mt-4">Raming Mass</p>
+            <p className="text-2xl text-orange-600 font-semibold text-center mt-4" style={{ fontFamily: 'Rubik, sans-serif' }}>Raming Mass</p>
           </div>
           <div className="px-8 flex items-center justify-center basis-7/12">
             <p className="text-gray-400 font-normal md:text-md text-md text-justify">
@@ -377,10 +379,15 @@ const Products = () => {
       </section>
 
 
-      <section className="p-4 pt-8 md:pt-16">
+      <section className="pt-8 md:pt-12">
+        <Products_slider />
+      </section>
+
+
+      {/* <section className="p-4 pt-8 md:pt-16">
         <div className="md:w-10/12 mx-auto">
           <div className="flex items-center justify-between">
-            <h2 className="text-white text-2xl">Industries</h2>
+            <h2 className="text-white text-2xl" style={{ fontFamily: 'Rubik, sans-serif' }}>Industries</h2>
           </div>
           <div className="px-5 md:px-0 flex flex-col py-10">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -395,9 +402,9 @@ const Products = () => {
                       className="w-full h-full object-cover rounded-lg"
                       alt=""
                     />
-                    {/* <p className="text-gray-800 font-normal text-sm text-center mt-2 p-1.5">
+                    <p className="text-gray-800 font-normal text-sm text-center mt-2 p-1.5">
                   {product}
-                </p> */}
+                </p>
                   </div>
                 </FadeUp>
               ))}
@@ -412,11 +419,11 @@ const Products = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="pt-8 md:pt-12">
+      {/* <section className="pt-8 md:pt-12">
         <div className="w-10/12 rounded-lg mx-auto p-5 h-80 md:h-[50vh] relative overflow-hidden bg-black text-white text-center flex flex-col justify-center items-center">
-          <h1 className="md:text-3xl text-2xl font-bold mb-4 md:mb-8">
+          <h1 className="md:text-3xl text-2xl font-bold mb-4 md:mb-8" style={{ fontFamily: 'Rubik, sans-serif' }}>
             <ZoomIn options={{ threshold: 0.3 }}>
               Transform Your Vision with Our Quartz
             </ZoomIn>
@@ -434,12 +441,12 @@ const Products = () => {
                 navigate("/contact-us");
               }}
               className="bg-white text-sm font-medium text-gray-700  mt-2 px-4 py-1.5 md:px-6 md:py-2 rounded-lg hover:bg-gray-200"
-            >
+            style={{ fontFamily: 'Rubik, sans-serif' }}>
               Let's Connect
             </button>
           </FadeUp>
         </div>
-      </section>
+      </section> */}
 
       <br />
     </section>

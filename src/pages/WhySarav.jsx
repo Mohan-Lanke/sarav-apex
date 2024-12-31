@@ -103,7 +103,7 @@ const WhySarav = () => {
               muted
               playsInline
             ></video>
-            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+            {/* <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
               <FadeUp>
                 <button
                   type="button"
@@ -115,7 +115,7 @@ const WhySarav = () => {
                   Request a Demo
                 </button>
               </FadeUp>
-            </div>
+            </div> */}
           </div>
         </Slider>
       </div>
@@ -284,9 +284,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Quality} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Quality Assurance</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Quality Assurance</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 We focus on delivering high quality and consistency. Our quartz is carefully sourced from certified mines and undergoes strict quality checks to ensure its purity and precision. Using modern processing methods and following global standards, we provide different grades of quartz to meet the needs of our domestic and international clients, every time.              </p>
             </FadeUp>
 
@@ -295,9 +295,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Export} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Exports</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Exports</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 we pride ourselves on our extensive export expertise in the global quartz market. Our dedicated team ensures that our high-quality quartz products meet the diverse needs of clients across countries such as China, Malaysia, Vietnam, Korea, Japan, Bhutan, Thailand, the USA, Bangladesh, and the UAE. With a robust logistics network and a commitment to customer satisfaction, we deliver unparalleled service and reliability. Partner with us to experience excellence in quartz trading on a global scale. Your trusted source for quality quartz awaits!
               </p>
             </FadeUp>
@@ -307,9 +307,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Good} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Good Value for Money</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Good Value for Money</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 We focus on giving you great value for your money with top-quality quartz products at fair prices. Our transparent pricing means you get the best deals without any surprises. Your satisfaction is our top priority, and we love seeing our customers come back for more because they trust us. When you choose us as your quartz supplier, you're not just making a purchase—you're building a partnership. Let us help you find exactly what you need!              </p>
             </FadeUp>
 
@@ -318,9 +318,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Timely} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Timely Delivery</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Timely Delivery</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 Our robust supply chain and logistics ensure that quartz products are delivered on time, even in challenging situations. With a dedicated customer service team ready to assist, we prioritize communication and transparency, ensuring you stay informed every step of the way. Trust us to keep your projects on track, no matter the obstacles. Experience reliability and excellence in quartz trading with us.
               </p>
             </FadeUp>
@@ -333,9 +333,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Team} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Team of Industry Experts</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Team of Industry Experts</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 SaravApex is powered by a team of experts in geology, logistics, quality control, and trade compliance, ensuring top-tier quartz products and reliable global delivery. Our specialists in finance and legal services guarantee secure, transparent transactions, while our technical advisors and business development team offer custom solutions across industries. Trust SaravApex for expert-driven, seamless quartz trading worldwide.
               </p>
             </FadeUp>
@@ -345,9 +345,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Technical} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Technical Support</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Technical Support</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 Our technical expertise optimizes extraction processes, enhancing efficiency and minimizing waste for high-quality quartz sourcing. We maintain rigorous quality control through testing and analysis to protect product integrity. Technical support includes equipment maintenance, reducing downtime and boosting operational efficiency, along with staff training to enhance safety and productivity.
 
                 This robust support enables SaravApex to swiftly address challenges, minimizing disruptions. Together, we drive success in the quartz industry.
@@ -359,9 +359,9 @@ const WhySarav = () => {
                 <div className="bg-[#262626] rounded-lg" style={{ width: '47px' }}>
                   <img src={Environment} alt="" className="h-full p-2" />
                 </div>
-                <p className="text-1xl font-semibold text-gray-300">Environmental Responsibility</p>
+                <p className="text-1xl font-semibold text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Environmental Responsibility</p>
               </div>
-              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px' }}>
+              <p className="text-sm text-gray-400 font-normal pt-4 md:pt-8" style={{ height: '200px', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 At SaravApex, we prioritize environmental responsibility in our quartz extraction and trading practices. We use sustainable mining techniques to minimize ecological impact, protect biodiversity, and manage resources efficiently. Our efforts include pollution control, community engagement, regulatory compliance, and land restoration post-mining. By integrating these principles, we contribute to a healthier planet while fulfilling industry needs.
               </p>
             </FadeUp>

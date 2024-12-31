@@ -12,9 +12,13 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import InfraA from "../assets/infrastructure_A.mp4"
 import { useNavigate } from 'react-router-dom';
+import Lab from "../assets/lab.png";
+import Mines from "../assets/mines.png";
+import Process from "../assets/processing.png";
+import Raw from "../assets/raw_material.png";
+
 
 
 const Infrastructure = () => {
@@ -55,7 +59,7 @@ const Infrastructure = () => {
 
   return (
     <div className="bg-[#1D2124]">
-    <div className="W-full">
+      <div className="W-full">
         <Slider {...Video_settings}>
           <div className="relative">
             <video
@@ -67,7 +71,7 @@ const Infrastructure = () => {
               muted
               playsInline
             ></video>
-            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+            {/* <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
               <FadeUp>
                 <button
                   type="button"
@@ -79,12 +83,12 @@ const Infrastructure = () => {
                   Request a Demo
                 </button>
               </FadeUp>
-            </div>
+            </div> */}
           </div>
         </Slider>
       </div>
 
-      <section className="flex md:flex-row flex-col gap-2 py-16">
+      {/* <section className="flex md:flex-row flex-col gap-2 py-16">
         <div className="md:w-8/12 w-full mx-auto">
           <div class="container md:flex md:items-center md:justify-center mx-auto">
             <div class="w-10/12 mx-auto h-96">
@@ -97,9 +101,6 @@ const Infrastructure = () => {
           </div>
         </div>
         <div className="md:w-4/12 flex flex-col items-center p-5">
-          {/* <p className="text-center text-gray-300 text-xl md:text-3xl uppercase border-b">
-            Infrastructre
-          </p> */}
           <div className=" pt-2 w-full px-4 rounded-lg">
             {
               infastructure_data.map((item) => (<>
@@ -113,8 +114,23 @@ const Infrastructure = () => {
                 </a>
               </>))
             }
+          </div>
+        </div>
+      </section> */}
+      <section>
+        <div className="W-full">
+          <img src={Mines} alt="" />
+          <img src={Lab} alt="" />
+          <img src={Process} alt="" />
+          <img src={Raw} alt="" />
+        </div>
+      </section>
+    </div>
+  );
+};
 
-            {/* <a
+
+{/* <a
               onClick={() => {
                 toggleMenu("/products/quartz_grits");
               }}
@@ -154,11 +170,5 @@ const Infrastructure = () => {
             >
               ● Raming mass
             </a> */}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
 
 export default Infrastructure;

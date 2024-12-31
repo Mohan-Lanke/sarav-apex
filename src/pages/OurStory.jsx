@@ -29,13 +29,13 @@ const items = [
 const testimonials = [
   {
     quote: `SaravApex has been a reliable supplier for our quartz needs. Their logistics team ensures that our shipments arrive exactly when expected ensuring that we don’t face shortage issues. It's a pleasure working with such a professional team.`,
-    author: "Anand.",
+    author: "Anand",
     position: "Head of Procurement, FerroAlloys Industry.",
   },
   {
     quote: `As a global quartz supplier, we’ve dealt with many vendors, but none have matched the level of professionalism and service offered by Mr.Prasad from Sarav Apex. He goes above and beyond to meet our needs, no matter the scale of the order.`,
-    author: "Mr. Prasad",
-    position: "Lei Jun, Sourcing Manager, Construction Industry.",
+    author: "Lei Jun",
+    position: "Sourcing Manager, Construction Industry.",
   },
   {
     quote: `We’ve been sourcing quartz from SaravApex. Their products have been essential to the success of our projects, and their support team is flexible & cooperative to address any concerns we may have.`,
@@ -115,63 +115,63 @@ const OurStory = () => {
     {
       id: 1,
       name: "Hyderabad, India",
-      details: "Address for Hyderabad",
+      // details: "Address for Hyderabad",
       top: "44%", // adjust based on actual pin position
       left: "65.3%", // adjust based on actual pin position
     },
     {
       id: 2,
       name: "Huawei, China",
-      details: "Address for China",
+      // details: "Address for China",
       top: "33%",
       left: "70%",
     },
     {
       id: 3,
       name: "Texas, US",
-      details: "Address for US",
+      // details: "Address for US",
       top: "30%",
       left: "17%",
     },
     {
       id: 4,
       name: "Japan",
-      details: "Address for Japan",
+      // details: "Address for Japan",
       top: "37.5%",
       left: "80%",
     },
     {
       id: 5,
       name: "Malaysia",
-      details: "Address for Malaysia",
+      // details: "Address for Malaysia",
       top: "60%",
       left: "75%",
     },
     {
       id: 6,
       name: "Bhutan",
-      details: "Address for Bhutan",
+      // details: "Address for Bhutan",
       top: "37.5%",
       left: "68%",
     },
     {
       id: 7,
       name: "South Korea",
-      details: "Address for South Korea",
+      // details: "Address for South Korea",
       top: "37.5%",
       left: "76%",
     },
     {
       id: 8,
       name: "Hong Kong",
-      details: "Address for Hong Kong",
+      // details: "Address for Hong Kong",
       top: "46%",
       left: "76%",
     },
     {
       id: 9,
       name: "Thailand",
-      details: "Address for Thailand",
+      // details: "Address for Thailand",
       top: "52%",
       left: "72%",
     },
@@ -204,7 +204,7 @@ const OurStory = () => {
               muted
               playsInline
             ></video>
-            <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
+            {/* <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '17%' }}>
               <FadeUp>
                 <button
                   type="button"
@@ -216,7 +216,7 @@ const OurStory = () => {
                   Request a Demo
                 </button>
               </FadeUp>
-            </div>
+            </div> */}
           </div>
         </Slider>
       </div>
@@ -244,8 +244,8 @@ const OurStory = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-8 md:px-16">
           {/* Image Box */}
           <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0 px-5">
-            <div className="w-full h-64 md:h-80 bg-orange-400 border-4 border-white">
-              <img className="h-full" src="https://catalog.wlimg.com/1/1135263/full-images/quartz-mines-3-3293443.jpg" alt="" />
+            <div className="w-full h-64 md:h-80 border-white">
+              <img className="h-full" src="https://catalog.wlimg.com/1/1135263/full-images/quartz-mines-3-3293443.jpg" alt="" style={{ borderRadius: '5px' }} />
             </div>
           </div>
 
@@ -254,17 +254,21 @@ const OurStory = () => {
             <FadeUp>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-12 h-[2px] bg-white"></div>
-                <h2 className="text-xl md:text-3xl font-semibold text-white fade-up">
-                  About Us - <span className="!text-orange-600">SaravApex</span>
+                <h2
+                  className="text-xl md:text-3xl font-semibold text-white fade-up"
+                  style={{ fontFamily: "'Rubik', sans-serif" }}
+                >
+                  About Us - <span className="!text-orange-600 " style={{fontSize:'20px'}}>SaravApex</span>
                 </h2>
+
               </div>
-              <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up">
+              <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up Jakarta">
                 At SaravApex, we take pride in being a trusted global producer and supplier of quartz and other industrial minerals. We specialize in the excavation, refinement, sourcing, processing and export of minerals tailored to meet the specific needs of diverse industries worldwide. With vast reserves, we consistently deliver high-quality minerals in both processed and lump forms, ensuring timely service for our domestic and international clients.
               </p>
-              <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up">
+              <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up Jakarta">
                 At the core of our operations lay direct access to our own mining quarries and state-of-the-art manufacturing facilities in southern India. This unique combination allowed us to maintain consistency in quality while offering competitive prices. Strategically positioned near major seaports, our location facilitated seamless logistics, enabling us to deliver our treasures to over 7+ countries around the globe.As certified quartz exporters, we are committed to excellence and innovation, continuously evolving to meet the growing demands of the global market.
               </p>
-              <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up">
+              <p className="text-sm font-normal text-gray-300 md:pl-14 text-justify mb-4 fade-up Jakarta">
                 Our dedicated team of mining and logistics professionals, with an average experience of nearly 20 years, focuses on providing personalized service, making SaravApex your reliable partner for Quartz backed by exceptional support and global expertise. Over the years, we have rapidly grown into a leading exporter and mine owner of essential minerals, committed to supporting our clients' success.
               </p>
               {/* <a
@@ -343,7 +347,7 @@ const OurStory = () => {
                   <p className="text-xl md:text-3xl text-white font-bold flex items-center gap-x-2">
                     <NumberAnimation value={item.count} /> {item.addOn}
                   </p>
-                  <p className="text-sm md:text-lg text-gray-300 font-semibold">
+                  <p className="text-sm md:text-lg text-gray-300 font-semibold jakarta">
                     {item.title}
                   </p>
                 </div>
@@ -357,17 +361,17 @@ const OurStory = () => {
         <ScaleComponent />
       </section>
       {/* vision and mission */}
-      <section className="bg-transparent h-full pt-8 md:pt-12">
+      <section className="bg-transparent h-full pt-8 md:pt-8">
         <div className="sm:w-11/12 md:w-9/12 lg:9/12 h-auto md:h-96 p-4 mx-auto grid md:grid-cols-2 gap-2 md:mt-16">
           <FadeLeft>
             <div className=" bg-[#36B37E] bg-opacity-20 h-full rounded-md  md:relative flex flex-col items-center justify-center p-4 md:p-2">
               <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
                 {/* <div className="h-64 bg-orange-300 w-11/12 md:w-8/12 rounded-lg">
                 </div> */}
-                <img src={Vision_Img} alt="" className="w-60 h-60 object-cover" />
+                <img src={Vision_Img} alt="" className="w-60 h-60 object-cover rounded-lg" />
                 <div className="md:w-8/12 !text-center">
-                  <p className="text-lg font-medium text-gray-300">Vision</p>
-                  <p className="text-sm font-normal text-gray-300">
+                  <p className="text-lg font-medium text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Vision</p>
+                  <p className="text-sm font-normal text-gray-300" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     To be the leading global provider of Minerals, recognized for our commitment to excellent customer satisfaction and sustainable practices.
                   </p>
                 </div>
@@ -378,10 +382,10 @@ const OurStory = () => {
             <div className="bg-[#33C6FC] bg-opacity-20 h-full rounded-md md:relative flex flex-col items-center justify-center p-4 md:p-2">
               <div className="md:absolute md:-top-16 flex flex-col gap-4 items-center">
                 {/* <div className="h-64 bg-orange-300 w-11/12 md:w-8/12 rounded-lg  "></div> */}
-                <img src={Mission_Img} alt="" className="w-60 h-60 object-cover" />
+                <img src={Mission_Img} alt="" className="w-60 h-60 object-cover rounded-lg" />
                 <div className="md:w-8/12 !text-center">
-                  <p className="text-lg font-medium text-gray-300">Mission</p>
-                  <p className="text-sm font-normal text-gray-300">
+                  <p className="text-lg font-medium text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>Mission</p>
+                  <p className="text-sm font-normal text-gray-300" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     To provide high-quality minerals that meet our customers' needs while being kind to the environment.
                   </p>
                 </div>
@@ -396,7 +400,7 @@ const OurStory = () => {
         <div className="w-11/12 md:flex mx-auto">
           <div className="md:w-4/12 flex items-center">
             <div className="flex gap-4 items-center mb-3">
-              <p className="text-2xl md:text-5xl text-white md:px-4 ">
+              <p className="text-2xl md:text-5xl text-white md:px-4 " style={{ fontFamily: 'Rubik, sans-serif' }}>
                 <ZoomIn duration={3} options={{ threshold: 0.3 }} >
                   We are trusted by our customers
                 </ZoomIn>
@@ -407,23 +411,23 @@ const OurStory = () => {
           <div className="md:w-8/12 pb-5 relative">
             <div className="flex gap-4 items-center mb-3">
               <div className="w-12 h-[2px] bg-white hidden md:block"></div>
-              <p className="text-xl md:text-3xl text-white text-center pl-6 md:pl-0">
+              <p className="text-xl md:text-3xl text-white text-center pl-6 md:pl-0" style={{ fontFamily: 'Rubik, sans-serif' }}>
                 What our customer says
               </p>
             </div>
 
-            <div className="md:pl-14 pl-6">
+            <div className="md:pl-14 pl-6" >
               <Slider {...testimonial_settings}>
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="flex flex-col items-center pl-2">
 
-                    <p className="text-sm md:text-lg text-gray-300 !font-normal mb-4 w-10/12">
+                    <p className="text-sm md:text-lg text-gray-300 !font-normal mb-4 w-10/12" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                       {`"${testimonial.quote}"`}
                     </p>
 
-                    <div className="text-sm md:text-lg text-gray-300 font-semibold  mt-4">
+                    <div className="text-sm md:text-lg text-gray-300 font-semibold  mt-4" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                       {testimonial.author}{" "}
-                      <span className="text-sm font-medium text-gray-300">
+                      <span className="text-sm font-medium text-gray-300" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                         - {testimonial.position}
                       </span>
                     </div>
@@ -434,11 +438,11 @@ const OurStory = () => {
             </div>
 
             {/* Quote Icon */}
-            <div className="absolute bottom-0 right-10 lg:right-44 text-orange-500 opacity-80">
+            {/* <div className="absolute bottom-0 right-10 lg:right-44 text-orange-500 opacity-80">
               <FadeRight>
                 <FaQuoteLeft size={60} />
               </FadeRight>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -471,14 +475,14 @@ const OurStory = () => {
 
       <section>
         <div className="bg-transparent py-10 px-6 sm:px-10 lg:px-20 mt-13">
-          <div className="max-w-4xl mx-auto text-white shadow-lg rounded-lg p-8">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-orange-800">
+          <div className="max-w-4xl bg-[#33C6FC] bg-opacity-20 mx-auto text-white shadow-lg rounded-lg p-8">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center" style={{ fontFamily: 'Rubik, sans-serif',color:'orange' }}>
               Founder’s Message
             </h1>
-            <p className="text-lg mb-4">
+            <p className="text-lg mb-4" style={{ fontFamily: 'Rubik, sans-serif' }}>
               Dear Partners and Clients,
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Our story began with a simple yet powerful commitment: to excavate
               and refine minerals with purpose. With a heart dedicated to service
               and excellence, SaravApex emerged as a trusted global producer and
@@ -487,41 +491,53 @@ const OurStory = () => {
               needs by offering customized solutions and tailored delivery to
               clients worldwide.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               As a one-stop shop for high-quality minerals, we are responsible &
               committed to protect the environment, ensure safety, and to follow
               ethical practices in everything we do. We aim to be the trusted
               source for your quartz needs, building reliability, a customer-focused
               approach, serving clients globally from the Far East to the West.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Located in southern India, our mines and processing units are
               recognized for their rich reserves and exceptional quality. With
               processing units of a monthly capacity up to 5,000 MT, we ensure a
               consistent supply of raw materials to both our facilities and domestic
               and international markets.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Our team, with an average of nearly 20 years in mining and logistics,
               is a key asset to SaravApex. Each member provides personalized
               service, making every interaction special.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               With extensive reserves, we proudly provide high-quality quartz in
               both processed and lump forms, ensuring timely deliveries to meet our
               partners' needs.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               As the sun sets over the quarries of Southern India, SaravApex stands
               as a symbol of reliability, quality, and commitment in high-purity
               minerals, ready to shape the future and build long-lasting
               partnerships around the world.
             </p>
-            <p className="leading-relaxed">
+            <p className="leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Discover how SaravApex can meet your quartz needs, and join us in our
               commitment to excellence and sustainability. Together, let’s create a
               brighter tomorrow!
             </p>
+            <div style={{float:'right'}}>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-12 h-[2px] bg-white"></div>
+                <h2
+                  className="text-xl md:text-1xl font-semibold text-white fade-up"
+                  style={{ fontFamily: "'Rubik', sans-serif",color:'orange' }}
+                >
+                  Apporva Ganta
+                </h2>
+
+              </div>
+            </div>
           </div>
         </div>
       </section>
