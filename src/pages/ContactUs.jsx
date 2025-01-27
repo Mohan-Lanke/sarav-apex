@@ -106,7 +106,7 @@ const ContactUs = () => {
 
           {/* Right Side - Form */}
           <div className="md:px-8 md:pt-0 rounded md:w-1/2 mx-auto">
-            <h1 className="text-2xl font-bold mb-6 text-gray-300 mx-auto xl:text-center">
+            <h1 className="text-2xl font-bold mb-6 text-gray-300 mx-auto xl:text-center" style={{ fontFamily: 'Rubik, sans-serif' }}>
               Contact Us
             </h1>
             <form className="max-w-md mx-auto" ref={form} onSubmit={sendEmail}>
@@ -115,7 +115,7 @@ const ContactUs = () => {
                   <label
                     className="block text-gray-300 font-medium text-sm mb-2"
                     htmlFor="first_name"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     First Name
                   </label>
                   <input
@@ -133,7 +133,7 @@ const ContactUs = () => {
                   <label
                     className="block text-gray-300 font-medium text-sm mb-2"
                     htmlFor="last_name"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     Last Name
                   </label>
                   <input
@@ -154,7 +154,7 @@ const ContactUs = () => {
                   <label
                     className="block text-gray-300 font-medium text-sm mb-2"
                     htmlFor="mobile"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     Mobile
                   </label>
                   <input
@@ -172,7 +172,7 @@ const ContactUs = () => {
                   <label
                     className="block text-gray-300 font-medium text-sm mb-2"
                     htmlFor="email"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     Email
                   </label>
                   <input
@@ -191,7 +191,7 @@ const ContactUs = () => {
                 <label
                   className="block text-gray-300 font-medium text-sm mb-2"
                   htmlFor="message"
-                >
+                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                   Message
                 </label>
                 <textarea
@@ -209,7 +209,7 @@ const ContactUs = () => {
                   className="p-8 bg-orange-500 text-white py-2 rounded hover:bg-blue-600"
                   type="submit"
                   disabled={loading}
-                >
+                  style={{ fontFamily: 'Rubik, sans-serif' }}>
                   {loading ? "Sending..." : "Submit"}
                 </button>
               </div>

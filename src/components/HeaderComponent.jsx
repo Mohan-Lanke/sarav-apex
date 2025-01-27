@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sarav_apex from "../assets/Sarav_apex_png.png";
 import BGV_Img from '../assets/bgv_img.jpeg';
+import Logo_Footter from '../assets/logo_footer.jpeg';
+
 
 
 const HeaderComponent = () => {
@@ -31,9 +33,9 @@ const HeaderComponent = () => {
             >
               <img
                 // src="https://via.placeholder.com/100" // Replace with your logo URL
-                src={sarav_apex} // Replace with your logo URL
+                src={Logo_Footter} // Replace with your logo URL
                 alt="Logo"
-                className="h-10 w-auto"
+                className="h-20 w-auto"
               />
             </div>
 
@@ -44,7 +46,7 @@ const HeaderComponent = () => {
                   toggleMenu("/")
                 }}
                 className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
-              >
+                style={{ fontFamily: 'Rubik, sans-serif' }}>
                 Our Story
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
@@ -53,12 +55,12 @@ const HeaderComponent = () => {
                   toggleMenu("/why-sarav");
                 }}
                 className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
-              >
+                style={{ fontFamily: 'Rubik, sans-serif' }}>
                 Why Sarav?
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
               <div className="relative group">
-                <a className="relative cursor-pointer flex items-center font-medium text-orange-600 transition duration-300">
+                <a className="relative cursor-pointer flex items-center font-medium text-orange-600 transition duration-300" style={{ fontFamily: 'Rubik, sans-serif' }}>
                   Products
                   <svg
                     className="ml-1 mt-0.5 h-4 w-4 transition-transform duration-300 group-hover:rotate-180"
@@ -82,7 +84,7 @@ const HeaderComponent = () => {
                       toggleMenu("/products/quartz_lumps");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     ● Quartz Lumps
                   </a>
                   <a
@@ -90,7 +92,7 @@ const HeaderComponent = () => {
                       toggleMenu("/products/quartz_grits");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     ● Quartz Grits/Grains
                   </a>
                   {/* <a
@@ -114,7 +116,7 @@ const HeaderComponent = () => {
                       toggleMenu("/products/quartz_sands");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     ● Quartz Sands
                   </a>
                   <a
@@ -122,7 +124,7 @@ const HeaderComponent = () => {
                       toggleMenu("/products/raming_mass");
                     }}
                     className="cursor-pointer block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-lg"
-                  >
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }} >
                     ● Raming mass
                   </a>
                 </div>
@@ -132,7 +134,7 @@ const HeaderComponent = () => {
                   toggleMenu("/infrastructre");
                 }}
                 className="relative group/border cursor-pointer font-medium text-orange-600 transition duration-300"
-              >
+                style={{ fontFamily: 'Rubik, sans-serif' }}>
                 Infrastructure
                 <span className="absolute bottom-0 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover/border:w-full group-hover/border:left-0 "></span>
               </a>
